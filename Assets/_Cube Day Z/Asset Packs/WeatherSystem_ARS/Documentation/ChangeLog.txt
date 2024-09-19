@@ -1,0 +1,55 @@
+Changelog:
+
+version 1.5.1
+-- fixed errors to support Time of Day asset version 3.1.0
+
+version 1.5.0
+-- added support for Unity 5
+-- changed input controls to sliders
+-- increased code performance
+-- automatic global fog component add and removal
+-- updated user manual and API documentation
+
+version 1.3.1
+-- fixed errors to support Time of Day asset version 2.3.0
+
+version 1.3.0
+-- fixed Weather Element position update
+-- fixed Lightning effect distance from camera
+-- allow manual control of fog if Fog Element is disabled
+
+version 1.2.1
+-- abstracted WeatherElement class for future weather elements
+-- modified WeatherSystem class for live editor updates
+-- Thunder and Lightning Element
+---- added branch lightning
+---- added lightning color
+---- added lightning glow color
+---- added lightning glow width
+---- added lightning origin glow color
+---- added lightning origin glow width
+---- added lightning flash intensity
+---- added min/max number of branch verts
+---- added min/max branch length
+---- added max branch deviation
+---- added branch start percentage
+---- added branch spacing
+-- Rain Element
+---- added wind effect on rain
+---- added rain drop color
+---- added rain absorption color
+---- added rain splash color
+---- added rain day/night alpha
+-- Fog Element
+---- added fog color
+---- added fog sounds
+-- Dust Element
+---- added wind effect on dust
+---- added dust color
+
+version 1.1.0
+-- internal version
+
+version 1.0.0
+-- initial version
+

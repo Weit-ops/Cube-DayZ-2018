@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Melee_SledgeHammer_ColorA_Melee_SledgeHammer_Melee_SledgeHammer_ColorA
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 108
+    topology: 0
+    firstVertex: 0
+    vertexCount: 72
+    localAABB:
+      m_Center: {x: -0.35035014, y: 0, z: 0}
+      m_Extent: {x: 3.86435, y: 1.739, z: 0.8695}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: []
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 3
+  m_IsReadable: 0
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer:
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 0
+    m_VertexCount: 0
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 0
+    _typelessdata:
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 216
+      m_Range: 7.7287
+      m_Start: -4.2147
+      m_Data: ffef472500fb5109c07e08febf1f82338515aa066185aa4158bbcd14d66e192175e80c481d3a0352d465841475ff8749e5ff6122084098080210269533e91bea4cfaeea681bebb69a06fa819517c684614533703c5d4cd40f1a1ffef47e5ff61520940985402b01f95338515ea4cfa86aa81bea16a1056a81921756846141f3a03c587ce80d4a100ec47250061520940980802b01f821a8415aa06fa86aa81bebb6910d66e332075e80c141f3a03c5d4cd80147500ec8720006122f87f9808febf1f821a84b59b06faee3693bebbcd14d66e332045dd0c14539711c5d465841475ffef87e0ff6122f87f9854febf1f953385b5db4cfaee3693bea1ce1456a81921455d4614539711c5876684d4a1
+      m_BitSize: 10
+    m_UV:
+      m_NumItems: 144
+      m_Range: 0.6543
+      m_Start: 0.1875
+      m_Data: 30ff4eff4efd30fd2bfa34fa34f32bf32cf933f933f42cf430fd30ff4eff4efd2bf32bfa34fa34f32cf42cf933f933f402d902dc21dc21d918d418e120e120d418d418e11fe11fd424d924dc26dc26d921d421e128e128d422d422e128e128d421d921dc02dc02d920d420e118e118d41fd41fe118e118d400d900dc02dc02d921d421e128e128d422d422e128e128d4
+      m_BitSize: 8
+    m_Normals:
+      m_NumItems: 144
+      m_Range: 1.999748
+      m_Start: -0.999874
+      m_Data: 200002200002200002200002200002200002e00ffee00ffee00ffee00ffee00ffee00ffe2008822008822008822008822008822008820008800008800008800008800008800008802008822008822008822008822008822008823ff8833ff8833ff8833ff8833ff8833ff883
+      m_BitSize: 6
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 72
+      m_Data: 000000ff0f00000000
+      m_BitSize: 1
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 108
+      m_Data: 8080002018100a0682e1804828108a05a3e160381e9088042299502a168ae582c968309a0da7e3e1783ea09008241a914a2692e9844aa950aa15abe562b95eb0980c269bd16a369aed86cbe970ba1dafe7e3f97ec0a010281c128b46a2f108
+      m_BitSize: 7
+    m_UVInfo: 5
+  m_LocalAABB:
+    m_Center: {x: -0.35035014, y: 0, z: 0}
+    m_Extent: {x: 3.86435, y: 1.739, z: 0.8695}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh:
+  m_BakedTriangleCollisionMesh:
+  m_MeshOptimized: 1

@@ -1,0 +1,17 @@
+{
+    "group": "VKSdk",
+    "libs": [],
+    "frameworks": [],
+    "librarysearchpaths":[],
+    "frameworksearchpaths":["VKSdk"],
+    "headerpaths": [],
+    "files":   ["VKSdk/VKSdk.framework",
+                "VKSdk/VKSdkResources.bundle",
+                "VKSdk/VKForUnityStarter.h",
+                "VKSdk/VKForUnityStarter.m:-fno-objc-arc",
+                ],
+    "folders": [],    
+    "excludes": ["^.*.meta$", "^.*.mdown$", "^.*.pdf$"],
+    "compiler_flags": [],
+    "linker_flags": []
+}

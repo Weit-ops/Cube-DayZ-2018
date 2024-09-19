@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: regular_truck_right_wheel
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 138
+    topology: 0
+    firstVertex: 0
+    vertexCount: 51
+    localAABB:
+      m_Center: {x: 0.00036621094, y: 0.00048828125, z: -0.0017089844}
+      m_Extent: {x: 1279.3446, y: 5518.9365, z: 5518.913}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: []
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 3
+  m_IsReadable: 0
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer:
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 0
+    m_VertexCount: 0
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 0
+    _typelessdata:
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 153
+      m_Range: 11037.873
+      m_Start: -5518.936
+      m_Data: 76ea0e909dff1691d8bf4524a63b40890108809d000290184045d8095011891501909d450094180000da0900808915f1af9d45fc9b1840badb0990ee8901f8bf9d00fe9fd8bfbadbf9afee89e9feaf9dbaff9bd8ff00daf93f8089e90e909dba039498ee0025f66f11890108606200029018404524560440890100606245fc9b1840ba2706e0ff89fdab7b62baff9bd8ff00daa93b4076fe0fa09dff1661278000d8095011761601909d0000686711ffda0990ee7602f8bf9dffea6ea7eeff02
+      m_BitSize: 10
+    m_UV:
+      m_NumItems: 102
+      m_Range: 0.34640902
+      m_Start: 0.45536548
+      m_Data: 03dc0177180e868be102f7183e7093e10477195e709be106f7197e70a3e108771a9e70abe10af71abe70b3e10cc731ae921c718d9a13d7e0ab3dc7efd813e0003181ea483ef69e7f211e1817a80fa5c7c852daa8bab12dceda03
+      m_BitSize: 7
+    m_Normals:
+      m_NumItems: 102
+      m_Range: 1.999748
+      m_Start: -0.999874
+      m_Data: e00ebee00bee200882200442200112200002200112200442200882e00bbee00eeee00ffee00eee00088000088000088000088000088000088000f8833ff8833ff8833ff8833ff8833ff8833f08
+      m_BitSize: 6
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 51
+      m_Data: 00f03f00000000
+      m_BitSize: 1
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 138
+      m_Data: 402000c21010425010854114877120c691208982248bb230cad2308dc3348ff340ce1341910445933451d25451954555977561d69561dac66d1dd7799cf7711fc88121178a9c387223c99125579a9ca971279aa6a8aaa2eb8ab22cdab6a8eba2ef8bc2301ac7a80c
+      m_BitSize: 6
+    m_UVInfo: 5
+  m_LocalAABB:
+    m_Center: {x: 0.00036621094, y: 0.00048828125, z: -0.0017089844}
+    m_Extent: {x: 1279.3446, y: 5518.9365, z: 5518.913}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh:
+  m_BakedTriangleCollisionMesh:
+  m_MeshOptimized: 1
