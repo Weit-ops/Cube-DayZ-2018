@@ -39,6 +39,12 @@ public class VKApiClient : MonoBehaviour {
         Application.OpenURL("https://oauth.vk.com/authorize?client_id=51906143&redirect_uri=" + phpScriptUrl + "vk_auth.php" + "&display=page&scope=friends&response_type=code");
 		StartCoroutine (StartWaitingLoopBack ());
 	}
+
+	public void Login(string uid, string token)
+	{
+		StartCoroutine (LoadUserProfile(uid, token));
+	}
+
 	public IEnumerator StartWaitingLoopBack()
 	{
 		while (true)
@@ -69,7 +75,7 @@ public class VKApiClient : MonoBehaviour {
 		string userId = js ["user_id"].ToString ();
 		string token = js ["access_token"].ToString ();
 		user.token = token;
-		StartCoroutine (LoadUserProfile(userId,token));
+		Login(userId, token);
 
 	}
 	private IEnumerator LoadUserProfile(string userId,string token)
@@ -85,6 +91,14 @@ public class VKApiClient : MonoBehaviour {
 		IsAuth = true;
 		StopCoroutine ("StartWaitingLoopBack");
 		StartCoroutine (LoadFriendsProfile ()); 
+
+		if(!PlayerPrefs.HasKey("vkuser"))
+		{
+			PlayerPrefs.SetString("vkuser", userId);
+			PlayerPrefs.SetString("vktoken", token);
+		}else{
+			user.token = token;
+		}
 	}
 	public IEnumerator LoadFriendsProfile()
 	{

@@ -88484,7 +88484,7 @@ MonoBehaviour:
   boxCollider2D: {fileID: 0}
   polygonCollider2D: []
   edgeCollider2D: []
-  boxCollider: {fileID: 0}
+  boxCollider: {fileID: 299}
   meshCollider: {fileID: 0}
   meshColliderPositions: []
   meshColliderMesh: {fileID: 0}
@@ -109405,7 +109405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06963ccd6db7d20d5ab8c6c9a276ff61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chatAppId: 358bfccc-24ae-4cf1-9112-c39dc4369acc
+  _chatAppId: a7e6b2be-2c14-4663-9b47-4a200b49e269
   _kickprase: HardResetAllServer111222333!
   _securityFlag: 0
   isConnected: 0
@@ -111973,7 +111973,7 @@ MonoBehaviour:
   ColorSpace: 0
   ColorRange: 0
   SkyQuality: 1
-  CloudQuality: 2
+  CloudQuality: 0
   MeshQuality: 0
   Cycle:
     Hour: 12

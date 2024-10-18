@@ -52,7 +52,13 @@ public class Controller : MonoBehaviour
 		}
 		vkapi = VkApi.VkApiInstance;
 
+		if(PlayerPrefs.HasKey("vkuser"))
+		{
+			string uid = PlayerPrefs.GetString("vkuser");
+			string tkn = PlayerPrefs.GetString("vktoken");
 
+			//VKApiClient.I.Login(uid, tkn);
+		}
 
 		Debug.Log("VK not login  " + CheckIfGuestExist() + "  " + _isLogout);
 
@@ -62,7 +68,7 @@ public class Controller : MonoBehaviour
 			Debug.Log("Login as a guest ");
 		}
 		if (!VKApiClient.I.IsAuth && !CheckIfGuestExist ()) {
-			StartCoroutine ("HideMainMenu");
+			 StartCoroutine ("HideMainMenu");
 		} 
 	}
 

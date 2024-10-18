@@ -334,13 +334,13 @@ public class CarWrapper : Photon.MonoBehaviour
 		StopDrivingMission();
 		if (missionId > 0)
 		{
-			StartCoroutine("UnlockDrivingMission", missionId);
+			//StartCoroutine("UnlockDrivingMission", missionId);
 		}
 	}
 
 	private void StopDrivingMission()
 	{
-		StopCoroutine("UnlockDrivingMission");
+		//StopCoroutine("UnlockDrivingMission");
 	}
 
 	[PunRPC]

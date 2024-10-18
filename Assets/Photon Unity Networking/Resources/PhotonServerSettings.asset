@@ -28,15 +28,6 @@ MonoBehaviour:
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
-  - Chat
-  - DestroyRpc
-  - InstantiateRpc
-  - PickupItemInit
-  - PunPickup
-  - PunPickupSimple
-  - PunRespawn
-  - RequestForPickupItems
-  - RequestForPickupTimes
   - Activate
   - ActivateMob
   - ActivateObject
@@ -45,12 +36,14 @@ MonoBehaviour:
   - CalculateNextFogSidePosition
   - ChangeItemInHandView
   - ChangeItemInStorage
+  - Chat
   - CheckChest
   - CheckIfCanGetItem
   - CreateRagdoll
   - DeactivateMob
   - DestroyByMaster
   - DestroyIslands
+  - DestroyRpc
   - Destruct
   - DropItem
   - DropLoot
@@ -65,6 +58,7 @@ MonoBehaviour:
   - HitMob
   - HitObject
   - InstantiateObjects
+  - InstantiateRpc
   - MobChangeSector
   - MobResetSector
   - ObjectChangeSector
@@ -73,10 +67,16 @@ MonoBehaviour:
   - OnFindTarget
   - OnRespawn
   - OpenChest
+  - PickupItemInit
   - PlaceItem
   - PlantItemByMaster
   - PlayerChangeSector
+  - PunPickup
+  - PunPickupSimple
+  - PunRespawn
   - RememberOldCarId
+  - RequestForPickupItems
+  - RequestForPickupTimes
   - RespawnPlayer
   - SeatOccupied
   - SetupSpawnPoint
