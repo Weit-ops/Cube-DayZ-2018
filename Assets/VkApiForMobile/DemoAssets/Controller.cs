@@ -141,7 +141,7 @@ public class Controller : MonoBehaviour
 	{
 		if (CheckIfGuestExist())
 		{
-			StartCoroutine(PHPNetwork.I.GetProfile (DataKeeper.BackendInfo.user.GetClientId(),string.Empty,PHPNetwork.GetMD5(DataKeeper.BackendInfo.user.GetClientId() + SystemInfo.deviceName), OnAuthResponse));
+			PHPNetwork.I.GetProfile(inputName.Text,OnAuthResponse);
 			return;
 		}
 
@@ -158,7 +158,7 @@ public class Controller : MonoBehaviour
 			}
 			PlayerPrefs.SetString ("plrguid8", "random");
 			PlayerPrefs.SetString ("plrgnam8", text);
-			StartCoroutine (PHPNetwork.I.GetProfile (DataKeeper.BackendInfo.user.GetClientId (), text.Replace (" ", "_"),PHPNetwork.GetMD5(DataKeeper.BackendInfo.user.GetClientId() + SystemInfo.deviceName), OnAuthResponse));
+			PHPNetwork.I.GetProfile (text,OnAuthResponse);
 			Debug.Log ("Create new Guest Player:  name = " + text);
 			MainMenuController.I.ToggleMainMenu (true);
 			ShowLoginWindow (false);
@@ -174,12 +174,12 @@ public class Controller : MonoBehaviour
 
 	public void OnVkAuthSuccesfull()
 	{
-		string userName = VKApiClient.I.user.first_name + "_" + VKApiClient.I.user.last_name;
+		/*string userName = VKApiClient.I.user.first_name + "_" + VKApiClient.I.user.last_name;
 		StartCoroutine(PHPNetwork.I.GetProfile (VKApiClient.I.user.userId,userName,PHPNetwork.GetMD5(VKApiClient.I.user.userId + "0300400243"), OnAuthResponse));
 		MainMenuController.I.ToggleMainMenu(true);
 		ShowLoginWindow(false);
 		VKApiClient.I.IsAuth = true;
-		Debug.Log ("VK auth succesfull!");
+		Debug.Log ("VK auth succesfull!");*/
 	}
 
 	public void OnAuthResponse(string data)

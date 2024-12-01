@@ -121,8 +121,8 @@ public static class DataKeeper
 
 	public static void SetupBuildVersion()
 	{
-		float num = Convert.ToSingle(BuildVersion);
-		float num2 = Convert.ToSingle(_chatAppVersion);
+		/*float num = Convert.ToSingle(BuildVersion.Replace('.',','));
+		float num2 = Convert.ToSingle(_chatAppVersion.Replace('.',','));
 		if (JsSpeeker.I.IsFacebook())
 		{
 			num += 1f;
@@ -140,6 +140,6 @@ public static class DataKeeper
 			num2 += 3f;
 		}
 		BuildVersion = num.ToString();
-		_chatAppVersion = num2.ToString();
+		_chatAppVersion = num2.ToString();*/
 	}
 }

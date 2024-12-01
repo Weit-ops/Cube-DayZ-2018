@@ -19,10 +19,10 @@ public class UserBackendInfo
 	public int premium_vip_remain_seconds;
 	public bool has_vip;
 	public int profit;
-	public string GetClientId(){
-		string text = SystemInfo.deviceUniqueIdentifier.Length.ToString() + "0403" + SystemInfo.deviceName.Length ;
-		return text;
+	public int GetClientId(){
+		return SystemInfo.deviceUniqueIdentifier.Length * 20000 + PHPNetwork.MD5Sun(SystemInfo.deviceUniqueIdentifier).Length * 400;
 	}
+	
 }
 
 [Serializable]
@@ -100,11 +100,11 @@ public class PHPNetwork : MonoBehaviour
 		"Rambo"
 	};
 
-	public static string db_url = "https://static2-speedybyte.ru/cdz/";
+	public static string db_url = "http://playme24.ru/cdz/cubez_backend.php";
 
 	public string phpSecret { get; private set;}
 
-	public int serverId
+	public int backendId
 	{
 		get
 		{
@@ -140,7 +140,7 @@ public class PHPNetwork : MonoBehaviour
 		return result;
 	}
 
-	public static string GetMD5(string input)
+	public static string MD5Sun(string input)
 	{
 		byte[] array = MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(input));
 		StringBuilder stringBuilder = new StringBuilder();
@@ -152,105 +152,77 @@ public class PHPNetwork : MonoBehaviour
 	}
 		
 
-	public IEnumerator GetProfile(string id,string newName,string secret,WebResponse wr)
+	public void GetProfile(string userName,Action<string> response)
 	{
-		string baseServer = db_url + "?";
-		string param = string.Empty;
-		string replyUrl = string.Empty;
-		string requestSig = string.Empty;
-		param = "user_id=" + id;
-		requestSig += param;
-		replyUrl += param + "&";
-		param = "secretKey=" + secret;
-		requestSig += param;
-		replyUrl += param + "&";
-		param = "v=" + DataKeeper.BuildVersion;
-		requestSig += param;
-		replyUrl += param + "&";
-		param = "requestCode=1";
-		replyUrl += param + "&";
-		param = "playerName=" + newName;
-		requestSig += param;
-		replyUrl += param + "&";
-		string paramsHash = GetMD5 (requestSig + phpSecret );
-		param = "hasher=" + paramsHash;
-		replyUrl += param;
-		WWW newCallback = new WWW (baseServer + replyUrl);
-		Debug.Log (newCallback.url);
-		yield return newCallback;
-		string response = newCallback.text;
-		wr (newCallback.text);
-
+		WWWForm hData = new WWWForm();
+        hData.AddField("user_id",DataKeeper.BackendInfo.user.GetClientId().ToString());
+		hData.AddField("user_name",userName);
+        hData.AddField("version",DataKeeper.BuildVersion);
+		hData.AddField("callback","GetProfile");
+		SendWaitingCallback(hData,response);
 	}
 	public void SaveView(PlayerViewSaveInfo info)
 	{
-		StartCoroutine (_SaveView (info));
+		WWWForm hData = new WWWForm();
+		hData.AddField("backendId",backendId.ToString());
+		hData.AddField("skinFace",info.FaceIndex);
+		hData.AddField("skinColor",info.SkinColorIndex);
+		hData.AddField("premiumPack",info.PremiumPackIndex);
+		hData.AddField("vipRainCoat",info.VipRainCoat);
+		hData.AddField("callback","SaveView");
+		SendWaitingCallback(hData);
 	}
-	private IEnumerator _SaveView(PlayerViewSaveInfo info)
-	{
-		string baseServer = db_url + "?";
-		string param = string.Empty;
-		string replyUrl = string.Empty;
-		string requestSig = string.Empty;
-		param = "playerId=" + serverId;
-		requestSig += param;
-		replyUrl += param + "&";
-		param = "requestCode=2";
-		replyUrl += param + "&";
-		param = "skinFace=" + info.FaceIndex;
-		requestSig += param;
-		replyUrl += param + "&";
-		param = "skinColor=" + info.SkinColorIndex;
-		requestSig += param;
-		replyUrl += param + "&";
-		param = "premiumPack=" + info.PremiumPackIndex;
-		requestSig += param;
-		replyUrl += param + "&";
-		param = "vipRainCoat=" + info.VipRainCoat;
-		requestSig += param;
-		replyUrl += param + "&";
-		string paramsHash = GetMD5 (requestSig + phpSecret);
-		param = "hasher=" + paramsHash;
-		replyUrl += param;
-		WWW newCallback = new WWW (baseServer + replyUrl);
-		yield return newCallback;
-		Debug.Log (newCallback.text);
-	}
+
 
 	public void SavePlayerProgressMultiplayer(string id)
 	{
-		Dictionary <string,string> possable = new Dictionary<string,string> ();
-		possable ["playerId"] = (serverId + "_" + id).ToString();
-		possable ["playerData"] = Convert.ToBase64String(WorldController.I.SavePlayerData());
-		SendWaitingCallback (3,possable,null);
+		WWWForm form = new WWWForm();
+		form.AddField("backendId",(backendId + "_" + id).ToString());
+		form.AddField("playerData",Convert.ToBase64String(WorldController.I.SavePlayerData()));
+		form.AddField("callback","SavePlayerMultiplayer");
+		SendWaitingCallback(form);
+		//SendWaitingCallback (3,possable,null);
 	}
 	public void LoadPlayerProgressMultiplayer(string id,Action<string> callback)
 	{
-		Dictionary <string,string> possable = new Dictionary<string,string> ();
-		possable ["playerId"] = (serverId + "_" + id).ToString();
-		SendWaitingCallback (4, possable,callback);
+	    WWWForm form = new WWWForm();
+		form.AddField("backendId",(backendId + "_" + id).ToString());
+		form.AddField("callback","LoadPlayerMultiplayer");
+		//SendWaitingCallback (4, possable,callback);
+		SendWaitingCallback(form,callback);
 	}
 
 	public void SaveWorldData(string name,string data)
 	{
-		Dictionary <string,string> possable = new Dictionary<string,string> ();
-		possable ["worldName"] = name;
-		possable ["worldData"] = data;
-		SendWaitingCallback (6, possable,null);
+		WWWForm form = new WWWForm();
+		if (name != string.Empty){
+		form.AddField("worldName",name);
+		}
+		form.AddField("worldData",data);
+		form.AddField("callback","SaveWorld");
+		SendWaitingCallback(form);
+		//SendWaitingCallback (6, possable,null);
 	}
 
 	public void LoadWorldMultiplayer(string name,Action<string> responseCallback){
-		Dictionary <string,string> possable = new Dictionary<string,string> ();
-		possable ["worldName"] = name;
-		SendWaitingCallback (7, possable, responseCallback);
+		WWWForm wWForm = new WWWForm();
+		wWForm.AddField("worldName",name);
+		wWForm.AddField("callback","LoadWorld");
+		//SendWaitingCallback (7, possable, responseCallback);
+		SendWaitingCallback(wWForm,responseCallback);
 	}
 
 	public void UseSpecialPack(int packId)
 	{
-		Dictionary <string,string> Data = new Dictionary<string,string> ();
-		Data ["playerId"] = serverId.ToString();
+		WWWForm form = new WWWForm();
+		form.AddField("backendId",backendId.ToString());
+		form.AddField("specialPackId",packId.ToString());
+		form.AddField("callback","UseSpecialPack");
+		SendWaitingCallback(form,UpdateSpecialPackCount);
+		/*Dictionary <string,string> Data = new Dictionary<string,string> ();
+		Data ["playerId"] = backendId.ToString();
 		Data ["specialPackId"] = packId.ToString ();
-		SendWaitingCallback (9, Data, UpdateSpecialPackCount);
+		SendWaitingCallback (9, Data, UpdateSpecialPackCount);*/
 	}
 
 
@@ -260,23 +232,20 @@ public class PHPNetwork : MonoBehaviour
 		int num = DataKeeper.SelectedSpecialPackId;
 		DataKeeper.BackendInfo.purchased_items[num - 1].count = Convert.ToInt32(jsix[SpecialPacksNames[num - 1]].ToString());
 	}
-	public void SendWaitingCallback(int q, Dictionary<string,string> param,Action<string> responseCallback)
+	public void SendWaitingCallback( WWWForm hData,Action<string> responseCallback = null)
 	{
-		StartCoroutine (_SendWaitingCallback (q,param,responseCallback));
+		StartCoroutine (_SendWaitingCallback (hData,responseCallback));
 	}
 
-	public IEnumerator _SendWaitingCallback(int q,Dictionary<string,string> param,Action<string> responseCallback)
+	public IEnumerator _SendWaitingCallback(WWWForm data,Action<string> responseCallback = null)
 	{
-		WWWForm form = new WWWForm ();
-		form.AddField ("requestCode", q);
 		string requestSig = string.Empty;
-		foreach (var headers in param)
+		foreach (var headers in data.headers)
 		{
-			form.AddField(headers.Key,headers.Value);
 			requestSig = requestSig + headers.Key + "=" + headers.Value;
 		}
-		form.AddField ("hasher", GetMD5(requestSig));
-		WWW newCallback = new WWW (db_url,form);
+		data.AddField ("MD", MD5Sun(requestSig));
+		WWW newCallback = new WWW (db_url,data);
 		yield return newCallback;
 		if (newCallback.error == null && responseCallback != null) 
 		{
@@ -291,8 +260,7 @@ public class PHPNetwork : MonoBehaviour
 	private void Awake(){
 		
 		DontDestroyOnLoad (gameObject);
-		phpSecret = GetMD5 ("ivanXO_devloper2008");
-		db_url = "https://static2-speedybyte.ru/cdz/cubez_backend.php";
+		phpSecret = MD5Sun ("ivanXO_devloper2008");
 		I = this;
 	}
 }

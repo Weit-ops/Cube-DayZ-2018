@@ -216,10 +216,7 @@ public class JsSpeeker : MonoBehaviour
 		PhotoUrl = v_photo;
 	}
 
-	public void _fb_exchangeinverse(object rate)
-	{
-		//null
-	}
+	
 
 	public void _fb_user_currency(object currency)
 	{

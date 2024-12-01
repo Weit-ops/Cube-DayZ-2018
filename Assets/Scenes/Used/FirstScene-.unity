@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   application_id: 51906143
   secure_secret: NtNn1Z4uu4fz8vSz3fgw
-  phpScriptUrl: https://static2-speedybyte.ru/cdz/
+  phpScriptUrl: https://playme24.ru/cdz/cubez_backend.php
   user:
     first_name: 
     last_name: 

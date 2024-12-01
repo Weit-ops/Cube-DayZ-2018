@@ -17,7 +17,6 @@ public class VipCarAlarm : MonoBehaviour
 
 	private IEnumerator AlarmSound()
 	{
-		Debug.Log("signaling!!!!!!!!!!!! YI YI YI");
 		alarmWork = true;
 		Alarm.SetActive(true);
 		yield return new WaitForSeconds(3f);
