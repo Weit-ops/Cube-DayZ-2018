@@ -4,43 +4,31 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Fireman
-  m_Shader: {fileID: 4800000, guid: d086de99d581aa04388099b50930cdb7, type: 3}
+  m_Shader: {fileID: 30, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 3750329255c409a44a2da771b5d4f4c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: _Cutoff
-      second: 0.5
-    - first:
-        name: _Shininess
-      second: 0.13256
+    - _Cutoff: 0.5
+    - _Shininess: 0.13256
     m_Colors:
-    - first:
-        name: _BloodColor
-      second: {r: 1, g: 0, b: 0, a: 1}
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _Emission
-      second: {r: 0, g: 0, b: 0, a: 0}
-    - first:
-        name: _SkinColor
-      second: {r: 0.83823526, g: 0.68487304, b: 0.61634946, a: 1}
-    - first:
-        name: _SpecColor
-      second: {r: 1, g: 1, b: 1, a: 0}
+    - _BloodColor: {r: 1, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
+    - _SkinColor: {r: 0.83823526, g: 0.68487304, b: 0.61634946, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 0}

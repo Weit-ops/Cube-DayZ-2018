@@ -5,8 +5,8 @@ using UnityEngine;
 using System.Collections;
 
 public class WaterZone : MonoBehaviour {
-	private GameObject playerObj;
-	private GameObject weaponObj;
+	public GameObject playerObj;
+	public GameObject weaponObj;
 	private bool swimTimeState = false;
 	private bool holdBreathState;
 	private AudioSource audioSource;
@@ -47,11 +47,10 @@ public class WaterZone : MonoBehaviour {
 	private float origLinearFogEnd = 30.0f;
 	//cache transform for efficiency
 	private Transform myTransform;
-	private Transform mainCamTransform;
+	public Transform mainCamTransform;
 	
 	void Start () {
 		myTransform = transform;
-		mainCamTransform = Camera.main.transform;
 		//assign this item's playerObj and weaponObj value
 		playerObj = mainCamTransform.GetComponent<CameraKick>().playerObj;
 		weaponObj = mainCamTransform.GetComponent<CameraKick>().weaponObj;
