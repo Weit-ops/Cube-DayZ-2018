@@ -7,19 +7,19 @@ public class GuiCompas : MonoBehaviour
     public Rect r;
    void OnGUI()
     {
-        if (GameControls.I.Player.transform.rotation.y >= 90 || GameControls.I.Player.transform.rotation.y <= -260)
+        if (GameControls.I.Player.transform.rotation.y >= 66)
         {
             GUILayout.Label("\nNorth");
         }
-        else if (GameControls.I.Player.transform.rotation.y >= 130 || GameControls.I.Player.transform.rotation.y <= -295)
+        else if (GameControls.I.Player.transform.rotation.y <= -100)
         {
             GUILayout.Label("\nEast");
         }
-        else if (GameControls.I.Player.transform.rotation.y >= 250 || GameControls.I.Player.transform.rotation.y <= -30)
+        else if (GameControls.I.Player.transform.rotation.y <= 0)
         {
             GUILayout.Label("\nSouth");
         }
-        else if (GameControls.I.Player.transform.rotation.y >= 2 || GameControls.I.Player.transform.rotation.y >= 2)
+        else if (GameControls.I.Player.transform.rotation.y >= 145)
         {
             GUILayout.Label("\nWest");
         }
