@@ -178,7 +178,6 @@ public class JsSpeeker : MonoBehaviour
 	public void _vk_name(string vkId)
 	{
 		viewer_id = vkId;
-		Debug.Log("user_id: " + viewer_id);
 
 		if (LoginMenuBlock.I != null)
 		{
@@ -186,19 +185,12 @@ public class JsSpeeker : MonoBehaviour
 		}
 
 		PhotonNetwork.playerName = vkId;
-		PhotonNetwork.player.UserId = vkId;
-		if (MenuConnectionController.I != null && vkId != null)
-		{
-			Debug.Log("Connect to Photon");
-			MenuConnectionController.I.ConnectToPhoton();
-		}
+		MenuConnectionController.I.ConnectToPhoton();
 	}
 
 	public void _vk_nick(string v_name)
 	{
 		vk_name = v_name;
-		Debug.Log("user _ name: " + vk_name);
-
 		if (LoginMenuBlock.I != null)
 		{
 			LoginMenuBlock.I.SetPlayerName(vk_name);
@@ -382,8 +374,6 @@ public class JsSpeeker : MonoBehaviour
 			if (!string.IsNullOrEmpty(MenuConnectionController.I.CurrentSessionKey) && !string.IsNullOrEmpty(key) && MenuConnectionController.I.CurrentSessionKey != key && TwoTabsDetector.I != null)
 			{
 				Debug.Log("Session is not valid, two tabs detected!");
-				TwoTabsDetector.I.ExitFromServer();
-				PhotonNetwork.Disconnect();
 			}
 
 			CanGetKey = true;

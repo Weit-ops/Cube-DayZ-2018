@@ -199,7 +199,7 @@ namespace Photon.Chat
             this.State = ChatState.Uninitialized;
 
             this.chatPeer = new ChatPeer(this, protocol);
-            this.chatPeer.SerializationProtocolType = SerializationProtocol.GpBinaryV18;
+            this.chatPeer.SerializationProtocolType = SerializationProtocol.GpBinaryV16;
 
             this.PublicChannels = new Dictionary<string, ChatChannel>();
             this.PrivateChannels = new Dictionary<string, ChatChannel>();

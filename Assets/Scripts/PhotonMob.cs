@@ -48,7 +48,10 @@ public class PhotonMob : Photon.MonoBehaviour
 			return (!_viewModel) ? null : _viewModel.GetComponent<ZombiesCustomizer>();
 		}
 	}
-
+	 void Awake()
+	{
+		m_TransformView = GetComponent<PhotonTransformView>();
+	}
 	private void Update()
 	{
 		if (_animator != null)
@@ -73,7 +76,7 @@ public class PhotonMob : Photon.MonoBehaviour
 
 	public void UseInterpolateSync(bool use)
 	{
-		m_TransformView.UseInterpolateSync = use;
+		
 	}
 
 	private float GetAnimatorSpeed(float speed)
@@ -113,7 +116,6 @@ public class PhotonMob : Photon.MonoBehaviour
 	{
 		base.transform.parent = WorldController.I.Mobs;
 		MobInfo = new PhotonMobInfo();
-		m_TransformView.SyncTransform = false;
 		MobIsActive = false;
 		MobPullingSystem.Instance.FirstAddMobToList(this);
 		WorldController.I.WorldMobs.Add(this);
@@ -193,7 +195,7 @@ public class PhotonMob : Photon.MonoBehaviour
 			_lastPosition = base.transform.position;
 			MobPullingSystem.Instance.ActivateMob(this);
 			GetComponent<Collider>().enabled = true;
-			m_TransformView.SyncTransform = true;
+			
 			MobIsActive = true;
 			_soundController.EnableZombieSounds(true);
 			ReenableAI();
@@ -227,7 +229,6 @@ public class PhotonMob : Photon.MonoBehaviour
 		DestroyViewModel();
 		MobPullingSystem.Instance.DeactivateMob(this);
 		GetComponent<Collider>().enabled = false;
-		m_TransformView.SyncTransform = false;
 		MobIsActive = false;
 		_soundController.EnableZombieSounds(false);
 		ReenableAI();

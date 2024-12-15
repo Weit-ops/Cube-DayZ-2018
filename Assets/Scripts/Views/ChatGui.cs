@@ -155,11 +155,11 @@ public class ChatGui : MonoBehaviour
 				}
 				if (chatType == ChatType.Server && PhotonNetwork.room != null)
 				{
-					UpdateManager.I.SendMessageToChat(UpdateManager.ServerChatChanel, _inputObject.Text);
+					UpdateManager.I.SendMessageToChat(UpdateManager.ServerChatChanel, string.Concat("^CE5B05AFF[", JsSpeeker.vk_name, "^CE5B05AFF]: ^CFFFFFFFF", _inputObject.Text));
 				}
 				if (chatType == ChatType.MainMenu)
 				{
-					UpdateManager.I.SendMessageToChat(UpdateManager.CommonChatChanel, _inputObject.Text);
+					UpdateManager.I.SendMessageToChat(UpdateManager.CommonChatChanel, string.Concat("^CE5B05AFF[", JsSpeeker.vk_name, "^CE5B05AFF]: ^CFFFFFFFF", _inputObject.Text));
 				}
 				_inputObject.Text = string.Empty;
 			}
@@ -192,23 +192,8 @@ public class ChatGui : MonoBehaviour
 		_messages.Commit();
 		for (int i = 0; i < selectedChannel.Messages.Count; i++)
 		{
-			string text2 = selectedChannel.Senders[i];
 			object obj = selectedChannel.Messages[i];
-			if (text2 == JsSpeeker.vk_name)
-			{
-				string text3 = text;
-				text = string.Concat(text3, "^CE5B05AFF[", text2, "^CE5B05AFF]: ^CFFFFFFFF", obj, "\n");
-			}
-			else if (text2 == "Leo Tesla")
-			{
-				string text3 = text;
-				text = string.Concat(text3, "^CF20707FF[", text2, "^CF20707FF]: ^CFFFFFFFF", obj, "\n");
-			}
-			else
-			{
-				string text3 = text;
-				text = string.Concat(text3, "^CBCBCAAFF[", text2, "^CBCBCAAFF]: ^CFFFFFFFF", obj, "\n");
-			}
+			text += string.Concat((string)obj , "\n");
 		}
 		_messages.text = text;
 		_messages.Commit();

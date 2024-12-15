@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: dbc57f5a7a2407cb7f003832c688bfd8
-timeCreated: 1713118252
-licenseType: Free
+guid: aa584fbee541324448dd18d8409c7a41
+labels:
+- ExitGames
+- PUN
+- Photon
+- Networking
 MonoImporter:
   serializedVersion: 2
-  name:
   defaultReferences: []
   executionOrder: 0
-  icon: {fileID: 0}
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+  icon: {instanceID: 0}

@@ -263,14 +263,7 @@ public class MenuConnectionViewController : MonoBehaviour
 		}
 	}
 
-	public void VkLogin()
-	{
-		if (Controller.I != null)
-		{
-			Controller.I.VkAuthClick ();
-		}
-	}
-
+	
 	private void OnEnable()
 	{
 		if (Controller.I != null && Controller.I.vkapi.isUserLoggedIn)

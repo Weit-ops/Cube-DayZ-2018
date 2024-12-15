@@ -51,7 +51,7 @@ public enum OwnershipOption
 /// PUN's NetworkView replacement class for networking. Use it like a NetworkView.
 /// </summary>
 /// \ingroup publicApi
-[AddComponentMenu("Photon Networking/Photon View")]
+[AddComponentMenu("Photon Networking/Photon View &v")]
 public class PhotonView : Photon.MonoBehaviour
 {
     #if UNITY_EDITOR
@@ -595,11 +595,6 @@ public class PhotonView : Photon.MonoBehaviour
     public void RPC(string methodName, PhotonTargets target, params object[] parameters)
     {
         PhotonNetwork.RPC(this, methodName, target, false, parameters);
-    }
-
-    public void RPC_ToListOfPlayers(string methodName, PhotonPlayer[] targetPlayers, params object[] parameters)
-    {
-        PhotonNetwork.RPC_ToListOfPlayers(this, methodName, targetPlayers, false, parameters);
     }
 
     /// <summary>

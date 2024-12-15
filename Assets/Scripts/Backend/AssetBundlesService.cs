@@ -297,9 +297,8 @@ public class AssetBundlesService : MonoBehaviour
 				currentProcessInfo.Www = WWW.LoadFromCacheOrDownload(url, bundle.Version);
 				_downloadResults[bundle.Name] = DownloadResult.Downloading;
 
-				Coroutine checkCoroutine = StartCoroutine(CheckAdditionalBundlesProgress(downloadingProcessIndex));
+			
 				yield return currentProcessInfo.Www;
-				StopCoroutine(checkCoroutine);
 
 				if (currentProcessInfo.Www.error == null)
 				{

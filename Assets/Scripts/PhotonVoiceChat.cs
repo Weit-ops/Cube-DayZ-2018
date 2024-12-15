@@ -1,11 +1,10 @@
 using Photon;
 using UnityEngine;
 
-[RequireComponent(typeof(PhotonVoiceRecorder))]
-[RequireComponent(typeof(PhotonVoiceSpeaker))]
+
 public class PhotonVoiceChat : Photon.MonoBehaviour
 {
-	public PhotonVoiceRecorder recorder;
+	/*public PhotonVoiceRecorder recorder;
 	public KeyCode voiceKey = KeyCode.V;
 
 	void Update()
@@ -19,5 +18,5 @@ public class PhotonVoiceChat : Photon.MonoBehaviour
 	bool GetVoiceButton()
 	{
 		return Input.GetKeyDown(voiceKey);
-	}
+	}*/
 }

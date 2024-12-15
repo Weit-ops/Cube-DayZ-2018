@@ -197,7 +197,7 @@ public class RespawnMenuController : MonoBehaviour
 		PurchasedItemsBackensInfo purchasedItemsBackensInfo = DataKeeper.BackendInfo.purchased_items.Find((PurchasedItemsBackensInfo item) => item.shop_id == index && item.count > 0);
 		if (purchasedItemsBackensInfo == null)
 		{
-			_respawnBtn.SetActive(false);
+			_respawnBtn.SetActive(true);
 			_respawnAtBedBtn.SetActive(false);
 			return;
 		}

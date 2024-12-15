@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Utility component to forward mouse or touch input to clicked gameobjects.
@@ -32,12 +32,12 @@ public class InputToEvent : MonoBehaviour
     {
         if (this.DetectPointedAtGameObject)
         {
-            goPointedAt = RaycastObject(Input.mousePosition);
+            goPointedAt = RaycastObject(ControlFreak2.CF2Input.mousePosition);
         }
 
-        if (Input.touchCount > 0)
+        if (ControlFreak2.CF2Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0);
+            ControlFreak2.InputRig.Touch touch = ControlFreak2.CF2Input.GetTouch(0);
             this.currentPos = touch.position;
 
             if (touch.phase == TouchPhase.Began)
@@ -52,19 +52,19 @@ public class InputToEvent : MonoBehaviour
             return;
         }
 
-        this.currentPos = Input.mousePosition;
-        if (Input.GetMouseButtonDown(0))
+        this.currentPos = ControlFreak2.CF2Input.mousePosition;
+        if (ControlFreak2.CF2Input.GetMouseButtonDown(0))
         {
-            Press(Input.mousePosition);
+            Press(ControlFreak2.CF2Input.mousePosition);
         }
-        if (Input.GetMouseButtonUp(0))
+        if (ControlFreak2.CF2Input.GetMouseButtonUp(0))
         {
-            Release(Input.mousePosition);
+            Release(ControlFreak2.CF2Input.mousePosition);
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (ControlFreak2.CF2Input.GetMouseButtonDown(1))
         {
-            this.pressedPosition = Input.mousePosition;
+            this.pressedPosition = ControlFreak2.CF2Input.mousePosition;
             this.lastGo = RaycastObject(this.pressedPosition);
             if (this.lastGo != null)
             {

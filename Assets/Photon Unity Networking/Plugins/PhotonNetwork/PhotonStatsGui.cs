@@ -1,4 +1,4 @@
-#pragma warning disable 1587
+﻿#pragma warning disable 1587
 /// \file
 /// <summary>Part of the [Optional GUI](@ref optionalGui).</summary>
 #pragma warning restore 1587
@@ -55,7 +55,7 @@ public class PhotonStatsGui : MonoBehaviour
     /// <summary>Checks for shift+tab input combination (to toggle statsOn).</summary>
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && Input.GetKey(KeyCode.LeftShift))
+        if (ControlFreak2.CF2Input.GetKeyDown(KeyCode.Tab) && ControlFreak2.CF2Input.GetKey(KeyCode.LeftShift))
         {
             this.statsWindowOn = !this.statsWindowOn;
             this.statsOn = true;    // enable stats when showing the window

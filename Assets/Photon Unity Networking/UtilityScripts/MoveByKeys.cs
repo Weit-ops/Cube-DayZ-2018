@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Very basic component to move a GameObject by WASD and Space.
@@ -41,9 +41,9 @@ public class MoveByKeys : Photon.MonoBehaviour
             return;
         }
 
-        if ((Input.GetAxisRaw("Horizontal") < -0.1f) || (Input.GetAxisRaw("Horizontal") > 0.1f))
+        if ((ControlFreak2.CF2Input.GetAxisRaw("Horizontal") < -0.1f) || (ControlFreak2.CF2Input.GetAxisRaw("Horizontal") > 0.1f))
         {
-            transform.position += Vector3.right * (Speed * Time.deltaTime) * Input.GetAxisRaw("Horizontal");
+            transform.position += Vector3.right * (Speed * Time.deltaTime) * ControlFreak2.CF2Input.GetAxisRaw("Horizontal");
         }
 
         // jumping has a simple "cooldown" time but you could also jump in the air
@@ -52,7 +52,7 @@ public class MoveByKeys : Photon.MonoBehaviour
             if (this.body != null || this.body2d != null)
             {
                 // obj has a Rigidbody and can jump (AddForce)
-                if (Input.GetKey(KeyCode.Space))
+                if (ControlFreak2.CF2Input.GetKey(KeyCode.Space))
                 {
                     this.jumpingTime = this.JumpTimeout;
 
@@ -76,9 +76,9 @@ public class MoveByKeys : Photon.MonoBehaviour
         // 2d objects can't be moved in 3d "forward"
         if (!this.isSprite)
         {
-            if ((Input.GetAxisRaw("Vertical") < -0.1f) || (Input.GetAxisRaw("Vertical") > 0.1f))
+            if ((ControlFreak2.CF2Input.GetAxisRaw("Vertical") < -0.1f) || (ControlFreak2.CF2Input.GetAxisRaw("Vertical") > 0.1f))
             {
-                transform.position += Vector3.forward * (Speed * Time.deltaTime) * Input.GetAxisRaw("Vertical");
+                transform.position += Vector3.forward * (Speed * Time.deltaTime) * ControlFreak2.CF2Input.GetAxisRaw("Vertical");
             }
         }
     }

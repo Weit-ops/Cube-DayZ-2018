@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: -1783217055, guid: 3a092d701c8054009a5ccc1b8caf500b, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  DontDestroyOnLoad: 1
-  AutoSetVersion: 1
+  DontDestroyOnLoad: 0
+  AutoSetVersion: 0
   GameVersion: 1.0
   EnableIfDefined: 
   DisableIfDefined: FINAL_BUILD
   OnlyInDevBuilds: 0
-  ShowOnException: 1
+  ShowOnException: 0
   TouchDetector: 1
   OpenAndCloseKeys: "~\\`|\xA7\xB1"
-  ShowSeparateExceptionButton: 1
-  ShowSeparateAssertButton: 1
-  DisableUGUIWhenOpen: 1
+  ShowSeparateExceptionButton: 0
+  ShowSeparateAssertButton: 0
+  DisableUGUIWhenOpen: 0
   PauseGameWhenOpen: 0
-  ShowRecentCommands: 1
+  ShowRecentCommands: 0
   DefaultToEmailAddress: 
   EditorScaleFactor: 1
   MobileScaleFactorPortrait: 0.8

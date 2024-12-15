@@ -59,7 +59,6 @@ public class UpdateManager : MonoBehaviour, IChatClientListener
 		{
 			SubscribeToServerChat();
 		}
-		Debug.Log("Exit chat reconnection ");
 	}
 
 	public void DebugReturn(ExitGames.Client.Photon.DebugLevel level, string message)
@@ -73,7 +72,7 @@ public class UpdateManager : MonoBehaviour, IChatClientListener
 		{
 			if (ChatClient.State != ChatState.ConnectedToFrontEnd)
 			{
-				Debug.Log("Trying reconnect to chat" + ChatClient.State);
+
 				name_for_chat = JsSpeeker.vk_name;
 				UpdateTaggedName();
 				ChatClient.Connect(_chatAppId, DataKeeper._chatAppVersion, new Photon.Chat.AuthenticationValues(name_for_chat));
@@ -87,14 +86,12 @@ public class UpdateManager : MonoBehaviour, IChatClientListener
 
 	public void OnConnected()
 	{
-		Debug.Log("!!!!!!!!!! OnConnected to chat");
 		ChatClient.Subscribe(_chatChanelsToDescribe2, 20);
 	}
 
 	public void OnSubscribed(string[] channels, bool[] results)
 	{
 		isConnected = true;
-		Debug.Log("Subscribed to chanel " + channels[0]);
 		StartCoroutine("UpdateMessageOnSuscribe");
 		if (ChatGui.I != null)
 		{
@@ -106,7 +103,6 @@ public class UpdateManager : MonoBehaviour, IChatClientListener
 	{
 		if (!string.IsNullOrEmpty(_message.ToString()) && _message.ToString() != lastmessage)
 		{
-			Debug.Log("Send Message" + ChatClient.State);
 			if (ChatClient.State == ChatState.ConnectedToFrontEnd)
 			{
 				lastmessage = _message.ToString();
@@ -121,7 +117,6 @@ public class UpdateManager : MonoBehaviour, IChatClientListener
 
 	public void OnGetMessages(string channelName, string[] senders, object[] messages)
 	{
-		Debug.Log("On Get Message");
 		if (channelName == _systemChatChanel)
 		{
 			for (int i = 0; i < messages.Length; i++)

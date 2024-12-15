@@ -19,8 +19,8 @@ public class UserBackendInfo
 	public int premium_vip_remain_seconds;
 	public bool has_vip;
 	public int profit;
-	public int GetClientId(){
-		return SystemInfo.deviceUniqueIdentifier.Length * 20000 + PHPNetwork.MD5Sun(SystemInfo.deviceUniqueIdentifier).Length * 400;
+	public int GetAuthId(){
+		return new Guid().ToString().Length * 240000 + PHPNetwork.MD5Sun(new Guid().ToString()).Length * 400;
 	}
 	
 }
@@ -100,7 +100,7 @@ public class PHPNetwork : MonoBehaviour
 		"Rambo"
 	};
 
-	public static string db_url = "http://playme24.ru/cdz/cubez_backend.php";
+	public static string db_url = "https://playme24.ru/cdz/cubez_backend.php";
 
 	public string phpSecret { get; private set;}
 
@@ -155,7 +155,9 @@ public class PHPNetwork : MonoBehaviour
 	public void GetProfile(string userName,Action<string> response)
 	{
 		WWWForm hData = new WWWForm();
-        hData.AddField("user_id",DataKeeper.BackendInfo.user.GetClientId().ToString());
+		string userId = VKApiClient.I.uid;
+		
+        hData.AddField("user_id",userId);
 		hData.AddField("user_name",userName);
         hData.AddField("version",DataKeeper.BuildVersion);
 		hData.AddField("callback","GetProfile");

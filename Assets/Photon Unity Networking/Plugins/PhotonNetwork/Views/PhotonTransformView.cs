@@ -49,9 +49,6 @@ public class PhotonTransformView : MonoBehaviour, IPunObservable
 	/// </summary>
 	bool m_firstTake = false;
 
-    public bool UseInterpolateSync { get; set; }
-    public bool SyncTransform { get; set; }
-
     void Awake()
     {
         this.m_PhotonView = GetComponent<PhotonView>();
@@ -68,7 +65,7 @@ public class PhotonTransformView : MonoBehaviour, IPunObservable
 
     void Update()
     {
-        if (this.SyncTransform == false || this.m_PhotonView == null || this.m_PhotonView.isMine == true || PhotonNetwork.connected == false || this.UseInterpolateSync == false)
+        if (this.m_PhotonView == null || this.m_PhotonView.isMine == true || PhotonNetwork.connected == false)
         {
             return;
         }
@@ -123,11 +120,6 @@ public class PhotonTransformView : MonoBehaviour, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (!SyncTransform)
-	{
-            return;
-	}
-
         this.m_PositionControl.OnPhotonSerializeView(transform.localPosition, stream, info);
         this.m_RotationControl.OnPhotonSerializeView(transform.localRotation, stream, info);
         this.m_ScaleControl.OnPhotonSerializeView(transform.localScale, stream, info);
@@ -137,7 +129,7 @@ public class PhotonTransformView : MonoBehaviour, IPunObservable
             this.DoDrawEstimatedPositionError();
         }
 
-        if (stream.isReading == true && !UseInterpolateSync)
+        if (stream.isReading == true)
         {
             this.m_ReceivedNetworkUpdate = true;
 

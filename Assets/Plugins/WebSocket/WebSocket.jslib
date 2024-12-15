@@ -1,12 +1,11 @@
 var LibraryWebSockets = {
 $webSocketInstances: [],
 
-SocketCreate: function(url, protocols)
+SocketCreate: function(url)
 {
-    var str = UTF8ToString(url);
-    var prot = UTF8ToString(protocols);
+    var str = Pointer_stringify(url);
     var socket = {
-        socket: new WebSocket(str, [prot]),
+        socket: new WebSocket(str, ['GpBinaryV16']),
         buffer: new Uint8Array(0),
         error: null,
         messages: []

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
-  AppID: 8b8bd3b3-4d0d-4662-b637-061e5d8068aa
-  VoiceAppID: 544cf7ac-11d5-414a-99d1-4b38ea1ea06c
-  ChatAppID: a7e6b2be-2c14-4663-9b47-4a200b49e269
+  AppID: e1491199-c5a6-4cd3-a179-63e8f61852c1
+  VoiceAppID: 
+  ChatAppID: 
   HostType: 1
   PreferredRegion: 11
   EnabledRegions: -1
@@ -22,12 +22,104 @@ MonoBehaviour:
   ServerAddress: 
   ServerPort: 5055
   VoiceServerPort: 5055
-  JoinLobby: 1
+  JoinLobby: 0
   EnableLobbyStatistics: 0
   PunLogging: 0
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - _ApplyDamage
+  - _ApplyFlash
+  - _BanPlayer
+  - _ChangeCanBuildStatus
+  - _ChangeCubes
+  - _ChangeCubesHealth
+  - _ChangeDominatingPointState
+  - _ChangeFlagState
+  - _ChangeItemState
+  - _ChangePlace
+  - _ChangeTeamScore
+  - _ChatMessage
+  - _CreateCanonShot
+  - _CreateEmptyClipEvent
+  - _CreateGameItem
+  - _CreateGameMagic
+  - _CreateGunShot
+  - _CreateHit
+  - _CreateNewAA
+  - _CreateNewWire
+  - _CreateRechargeSound
+  - _CreateShot
+  - _CreateShot2
+  - _DeleteAA
+  - _DeleteWire
+  - _Die
+  - _DoExplosion
+  - _EnterGame
+  - _ExitDrive
+  - _Explode
+  - _FireGun
+  - _FlagCaptured
+  - _Freeze
+  - _GetInTransport
+  - _GiveLotOfDrop
+  - _HereAreMyParams
+  - _MonsterAlifeYet
+  - _MonsterDead
+  - _MoveItem
+  - _NS
+  - _NS0
+  - _NS1
+  - _OrderToCreateMonster
+  - _PlaceNewCube
+  - _PlayActivity
+  - _PlayerDressSkin
+  - _RemoveGameItem
+  - _RequestToRespawnTransport
+  - _RequestToRestartShooter
+  - _RequestToRestartTeamShooter
+  - _Respawn
+  - _RotateGameItem
+  - _SaveMapItem
+  - _SaveMonsterRespawn
+  - _SaveTransportRespawn
+  - _SaveTrigger
+  - _SaveWire
+  - _SendGameParams_Shooter
+  - _SendGameParams_Teams
+  - _SendMeGameParams
+  - _SendMeParams
+  - _SendMissionParams
+  - _SendMyParams
+  - _SendNoPlaceToDrive
+  - _SendSurvivalParams
+  - _SetAAParameters
+  - _SetSurvivalModeReady
+  - _StartExplosion
+  - _Startle
+  - _SurvivalStartNewWave
+  - _SynhronizePlayer
+  - _SynhronizePlayers
+  - _Teleport
+  - _Throw
+  - _ToggleTestMission
+  - _TransportAlifeYet
+  - _TransportDead
+  - _TryChangePlace
+  - _TryToDrive
+  - _UnFreeze
+  - Chat
+  - DestroyRpc
+  - InstantiateRpc
+  - MapFromMaster
+  - PickupItemInit
+  - PunPickup
+  - PunPickupSimple
+  - PunRespawn
+  - RequestForPickupItems
+  - RequestForPickupTimes
+  - SendMeMap
+  - _SendGameParams_Survival
   - Activate
   - ActivateMob
   - ActivateObject
@@ -36,14 +128,12 @@ MonoBehaviour:
   - CalculateNextFogSidePosition
   - ChangeItemInHandView
   - ChangeItemInStorage
-  - Chat
   - CheckChest
   - CheckIfCanGetItem
   - CreateRagdoll
   - DeactivateMob
   - DestroyByMaster
   - DestroyIslands
-  - DestroyRpc
   - Destruct
   - DropItem
   - DropLoot
@@ -58,7 +148,6 @@ MonoBehaviour:
   - HitMob
   - HitObject
   - InstantiateObjects
-  - InstantiateRpc
   - MobChangeSector
   - MobResetSector
   - ObjectChangeSector
@@ -67,16 +156,10 @@ MonoBehaviour:
   - OnFindTarget
   - OnRespawn
   - OpenChest
-  - PickupItemInit
   - PlaceItem
   - PlantItemByMaster
   - PlayerChangeSector
-  - PunPickup
-  - PunPickupSimple
-  - PunRespawn
   - RememberOldCarId
-  - RequestForPickupItems
-  - RequestForPickupTimes
   - RespawnPlayer
   - SeatOccupied
   - SetupSpawnPoint
