@@ -2979,6 +2979,14 @@ public static class PhotonNetwork
         }
     }
 
+    internal static void RPC_ToListOfPlayers(PhotonView view, string methodName, PhotonPlayer[] players, bool encrpyt, params object[] parameters)
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            RPC(view, methodName, players[i], encrpyt, parameters);
+        }
+    }
+
     /// <summary>
     /// Populates SendMonoMessageTargets with currently existing GameObjects that have a Component of type.
     /// </summary>

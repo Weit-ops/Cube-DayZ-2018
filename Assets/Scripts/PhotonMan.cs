@@ -679,11 +679,11 @@ public class PhotonMan : Photon.MonoBehaviour, IPunObservable
 			}
 			if (targetPoint.HasValue)
 			{
-				base.photonView.RPC("ShowAttackAtPoint", list[0], (short)targetPoint.Value.x, (short)targetPoint.Value.y, (short)targetPoint.Value.z);
+				base.photonView.RPC_ToListOfPlayers("ShowAttackAtPoint", list.ToArray(), (short)targetPoint.Value.x, (short)targetPoint.Value.y, (short)targetPoint.Value.z);
 			}
 			else
 			{
-				base.photonView.RPC("ShowAttack", list[0]);
+				base.photonView.RPC_ToListOfPlayers("ShowAttack", list.ToArray());
 			}
 		}
 	}
