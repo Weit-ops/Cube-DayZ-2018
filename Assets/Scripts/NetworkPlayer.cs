@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class NetworkPlayer : Photon.MonoBehaviour
 {
-	public Rigidbody rig;
-
 	public Light[] headLights;
 
 	public Transform FrontLeftWheelTransform;

@@ -588,7 +588,10 @@ PlayerSettings:
   webGLCompressionFormat: 2
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    4: CF_FORCE_MOBILE_MODE
+    7: CF_FORCE_MOBILE_MODE
+    14: CF_FORCE_MOBILE_MODE
   platformArchitecture: {}
   scriptingBackend:
     Android: 0
