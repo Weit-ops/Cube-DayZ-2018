@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 using LitJson;
+
 using UnityEngine;
 
 [Serializable]
@@ -100,7 +101,7 @@ public class PHPNetwork : MonoBehaviour
 		"Rambo"
 	};
 
-	public static string db_url = "https://playme24.ru/cdz/cubez_backend.php";
+	public static string db_url = "http://playme24.ru/cdz/cubez_backend.php";
 
 	public string phpSecret { get; private set;}
 
@@ -152,13 +153,12 @@ public class PHPNetwork : MonoBehaviour
 	}
 		
 
-	public void GetProfile(string userName,Action<string> response)
+	public void GetProfile(Action<string> response)
 	{
 		WWWForm hData = new WWWForm();
-		string userId = VKApiClient.I.uid;
+		string userId = MD5Sun(SystemInfo.deviceUniqueIdentifier).Substring(0,9) ;
 		
         hData.AddField("user_id",userId);
-		hData.AddField("user_name",userName);
         hData.AddField("version",DataKeeper.BuildVersion);
 		hData.AddField("callback","GetProfile");
 		SendWaitingCallback(hData,response);
@@ -226,7 +226,14 @@ public class PHPNetwork : MonoBehaviour
 		Data ["specialPackId"] = packId.ToString ();
 		SendWaitingCallback (9, Data, UpdateSpecialPackCount);*/
 	}
-
+	public void ChangeName(string text)
+	{
+        WWWForm form = new WWWForm();
+        form.AddField("backendId", backendId.ToString());
+        form.AddField("user_name", text);
+        form.AddField("callback", "NickName");
+        SendWaitingCallback(form, UpdateSpecialPackCount);
+    }
 
 	public void UpdateSpecialPackCount(string response)
 	{
@@ -241,12 +248,12 @@ public class PHPNetwork : MonoBehaviour
 
 	public IEnumerator _SendWaitingCallback(WWWForm data,Action<string> responseCallback = null)
 	{
-		string requestSig = string.Empty;
+		string MD5SUN = string.Empty;
 		foreach (var headers in data.headers)
 		{
-			requestSig = requestSig + headers.Key + "=" + headers.Value;
+            MD5SUN = MD5SUN + headers.Key + "=" + headers.Value;
 		}
-		data.AddField ("MD", MD5Sun(requestSig));
+		data.AddField ("MD", MD5Sun(MD5SUN));
 		WWW newCallback = new WWW (db_url,data);
 		yield return newCallback;
 		if (newCallback.error == null && responseCallback != null) 

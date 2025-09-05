@@ -15,7 +15,7 @@ namespace BattleRoyale
 
 		public static int WaitInLobbyForFillRoomToMax = 30;
 
-		private static float _minStartPercent = 2f;
+		private static float _minStartPercent = 8f;
 
 		public static int StartingCountdown = 10;
 		public static float FogAreaMovingSpeed = 15f;

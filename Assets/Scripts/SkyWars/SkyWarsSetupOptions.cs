@@ -9,7 +9,7 @@ namespace SkyWars
 
 		public static int WaitInLobbyForFillRoomToMax = 10;
 
-		private static float _minStartPercent = 2f;
+		private static float _minStartPercent = 4f;
 
 		public static int StartingCountdown = 10;
 

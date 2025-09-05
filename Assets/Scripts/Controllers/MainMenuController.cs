@@ -17,6 +17,9 @@ public class MainMenuController : MonoBehaviour
 	[SerializeField] GameObject _specialOffer2;
 	[SerializeField] GameObject _specialOffer3;
 	public GameObject _errorAuthOldVersionPanel;
+	public GameObject _errorAuthBanPanel;
+	public GameObject _loadingAccountPanel;
+	public GameObject _newNamePanel;
 	public GameObject MobileLoginWindow;
 
 	public ReskinGameType _reskinType;

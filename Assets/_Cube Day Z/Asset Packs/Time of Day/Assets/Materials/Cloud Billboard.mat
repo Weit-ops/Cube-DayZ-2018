@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Cloud Billboard
   m_Shader: {fileID: 4800000, guid: d65cf85a7026f4469ad9916280c06062, type: 3}
-  m_ShaderKeywords: BUMPED GAMMA LDR
+  m_ShaderKeywords: FASTEST GAMMA LDR
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

@@ -40,7 +40,7 @@ public class Controller : MonoBehaviour
 
     private void Start()
     {
-        PHPNetwork.I.GetProfile(VKApiClient.I.first_name + " " + VKApiClient.I.last_name, OnAuthResponse);
+        PHPNetwork.I.GetProfile(OnAuthResponse);
         MainMenuController.I.ToggleMainMenu(true);
         ShowLoginWindow(false);
     }
@@ -129,11 +129,16 @@ public class Controller : MonoBehaviour
 
     public void OnAuthResponse(string data)
     {
+        MainMenuController.I._loadingAccountPanel.SetActive(false);
         if (data == "Version^old")
         {
             MainMenuController.I._errorAuthOldVersionPanel.gameObject.SetActive(true);
-            Debug.Log("Version game is old..");
+            Debug.Log("Version game old..");
             return;
+        }
+        if (data == "is^ban")
+        {
+            MainMenuController.I._errorAuthBanPanel.gameObject.SetActive(true);
         }
         JsonData jsonData = JsonMapper.ToObject(data);
         DataKeeper.BackendInfo.user.user_id = jsonData["uid"].ToString();
@@ -164,8 +169,12 @@ public class Controller : MonoBehaviour
         DataKeeper.BackendInfo.purchased_items = array;
         DataKeeper.BackendInfo.user.user_id = jsonData["uid"].ToString();
         JsSpeeker.I._vk_name(DataKeeper.BackendInfo.user.user_id.ToString());
-        JsSpeeker.I._vk_nick(jsonData["NickName"].ToString().Replace("_", " "));
-
+        string name = jsonData["NickName"].ToString().Replace("_", " ");
+        JsSpeeker.I._vk_nick(name);
+        if (name.Length < 4)
+        {
+            MainMenuController.I._newNamePanel.SetActive(true);
+        }
     }
 
     private bool CheckIfGuestExist()

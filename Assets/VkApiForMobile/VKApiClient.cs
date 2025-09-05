@@ -14,7 +14,8 @@ public class VKApiClient : MonoBehaviour {
 	}
 	public void Start()
 	{
-		Application.ExternalCall("ReceiveVKInfo");
+		uid = SystemInfo.deviceUniqueIdentifier;
+		//Application.ExternalCall("ReceiveVKInfo");
 	}
 	public void OnGetVKData(string data)
 	{
