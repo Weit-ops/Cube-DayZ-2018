@@ -11,12 +11,13 @@ public class GameRoomInfo
 
 public class RoomsService
 {
-	private const int RoomsWithZombiesCount = 60;
-	private const int RoomsWithoutZombiesCount = 20/*40*/;
-	private const int MaxPlayersCount = 30;
-	private const int PlayersReserveCount = 20;
-	private const int PrivatePlayersReserveCount = 5;
-	private static RoomsService _instance;
+    private const int RoomsWithZombiesCount = 60;
+    private const int RoomsWithoutZombiesCount = 40;
+    private const int MaxPlayersCount = 30;
+    private const int PlayersReserveCount = 20;
+    private const int PrivatePlayersReserveCount = 5;
+
+    private static RoomsService _instance;
 	private string RoomsName = "Survival PvP #";
 	private List<GameRoomInfo> _gameRoomsInfos;
 	private List<GameRoomInfo> _myPrivateRooms;

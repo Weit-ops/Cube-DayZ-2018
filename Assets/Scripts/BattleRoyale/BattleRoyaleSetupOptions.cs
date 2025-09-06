@@ -11,11 +11,11 @@ namespace BattleRoyale
 
 	public class BattleRoyaleSetupOptions
 	{
-		private static byte _maxPlayerOnServer = 20;
+		private static byte _maxPlayerOnServer = 45;
 
 		public static int WaitInLobbyForFillRoomToMax = 30;
 
-		private static float _minStartPercent = 8f;
+		private static float _minStartPercent = 21f;
 
 		public static int StartingCountdown = 10;
 		public static float FogAreaMovingSpeed = 15f;

@@ -1,4 +1,4 @@
-//FPSRigidBodyWalker.cs by Azuline StudiosВ© All Rights Reserved
+﻿//FPSRigidBodyWalker.cs by Azuline StudiosВ© All Rights Reserved
 //Manages player movement controls, sets player movement speed, plays certain sound effects 
 //determines player movement state, and sets player's rigidbody velocity.
 using UnityEngine;
@@ -308,7 +308,7 @@ public class FPSRigidBodyWalker : MonoBehaviour {
 				return;
 			}
 
-			if (!grounded || FPSPlayerComponent.inTheCar || (!sprintActive && limitedSprint))
+			if ((!grounded || FPSPlayerComponent.inTheCar || (!sprintActive && limitedSprint)) && !jumping)
 			{
 				if (staminaForSprintAmt < (float)staminaForSprint && Time.time - sprintStopTime >= (float)sprintRegenTime)
 				{

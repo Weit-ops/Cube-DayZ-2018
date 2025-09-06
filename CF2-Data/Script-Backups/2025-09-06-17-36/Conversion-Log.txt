@@ -1,0 +1,422 @@
+Converting script [1 / 51]	[\!Realistic FPS Prefab Files\Scripts\Camera\DragRigidbody.cs]
+	Fragments : 3
+		[ 0] : Line:   39	InputMethod   GetKeyDown          	(FPSPlayerComponent.moveObject)
+		[ 1] : Line:  100	InputMethod   GetKey              	(FPSPlayerComponent.moveObject)
+		[ 2] : Line:  106	InputMethod   GetKey              	(FPSPlayerComponent.throwObject)
+
+Converting script [2 / 51]	[\!Realistic FPS Prefab Files\Scripts\Camera\SmoothMouseLook.cs]
+	Fragments : 9
+		[ 0] : Line:   48	Other mod.	[Cursor.visible]
+		[ 1] : Line:   56	Other mod.	[Cursor.lockState]
+		[ 2] : Line:   57	Other mod.	[Cursor.visible]
+		[ 3] : Line:   60	InputMethod   GetAxisRaw          	("Mouse X")
+		[ 4] : Line:   61	InputMethod   GetAxisRaw          	("Mouse Y")
+		[ 5] : Line:   64	InputMethod   GetAxisRaw          	("Mouse Y")
+		[ 6] : Line:   69	InputMethod   GetAxisRaw          	("Mouse X")
+		[ 7] : Line:   89	Other mod.	[Cursor.lockState]
+		[ 8] : Line:   90	Other mod.	[Cursor.visible]
+
+Converting script [3 / 51]	[\!Realistic FPS Prefab Files\Scripts\HUD\HelpText.cs]
+	Fragments : 2
+		[ 0] : Line:   50	InputMethod   GetKeyDown          	(FPSPlayerComponent.showHelp)
+		[ 1] : Line:   75	InputMethod   GetKeyDown          	(FPSPlayerComponent.showHelp)
+
+Converting script [4 / 51]	[\!Realistic FPS Prefab Files\Scripts\Player\FPSPlayer.cs]
+	Fragments : 10
+		[ 0] : Line:  423	InputMethod   GetKeyUp            	(KeyCode.E)
+		[ 1] : Line:  432	InputMethod   GetKeyUp            	(KeyCode.Equals)
+		[ 2] : Line:  432	InputMethod   GetKeyUp            	(KeyCode.KeypadPlus)
+		[ 3] : Line:  436	InputMethod   GetKeyUp            	(KeyCode.Minus)
+		[ 4] : Line:  436	InputMethod   GetKeyUp            	(KeyCode.KeypadMinus)
+		[ 5] : Line:  440	InputMethod   GetKeyUp            	(KeyCode.Backspace)
+		[ 6] : Line:  534	InputMethod   GetKey              	(exitGame)
+		[ 7] : Line:  539	InputMethod   GetKey              	(restartScene)
+		[ 8] : Line:  561	InputMethod   GetKey              	(zoom)
+		[ 9] : Line:  775	InputMethod   GetKey              	(use)
+
+Converting script [5 / 51]	[\!Realistic FPS Prefab Files\Scripts\Player\FPSRigidBodyWalker.cs]
+	Fragments : 30
+		[ 0] : Line:  279	InputMethod   GetKeyDown          	(FPSPlayerComponent.crouch)
+		[ 1] : Line:  346	InputMethod   GetKey              	(FPSPlayerComponent.moveForward)
+		[ 2] : Line:  354	InputMethod   GetAxis             	("Vertical")
+		[ 3] : Line:  376	InputMethod   GetKey              	(FPSPlayerComponent.moveBack)
+		[ 4] : Line:  377	InputMethod   GetKey              	(FPSPlayerComponent.moveBack)
+		[ 5] : Line:  377	InputMethod   GetKey              	(FPSPlayerComponent.moveForward)
+		[ 6] : Line:  378	InputMethod   GetKey              	(FPSPlayerComponent.moveBack)
+		[ 7] : Line:  378	InputMethod   GetKey              	(FPSPlayerComponent.moveForward)
+		[ 8] : Line:  379	InputMethod   GetKey              	(FPSPlayerComponent.strafeLeft)
+		[ 9] : Line:  380	InputMethod   GetKey              	(FPSPlayerComponent.strafeRight)
+		[10] : Line:  381	InputMethod   GetKey              	(FPSPlayerComponent.strafeLeft)
+		[11] : Line:  381	InputMethod   GetKey              	(FPSPlayerComponent.strafeRight)
+		[12] : Line:  389	InputMethod   GetAxis             	("Horizontal")
+		[13] : Line:  448	InputMethod   GetKeyDown          	(FPSPlayerComponent.jump)
+		[14] : Line:  459	InputMethod   GetKey              	(FPSPlayerComponent.sprint)
+		[15] : Line:  464	InputMethod   GetKey              	(FPSPlayerComponent.moveForward)
+		[16] : Line:  484	InputMethod   GetAxis             	("Fire1")
+		[17] : Line:  485	InputMethod   GetKey              	(FPSPlayerComponent.reload)
+		[18] : Line:  486	InputMethod   GetKey              	(FPSPlayerComponent.zoom)
+		[19] : Line:  487	InputMethod   GetKey              	(FPSPlayerComponent.fire)
+		[20] : Line:  612	InputMethod   GetKey              	(FPSPlayerComponent.jump)
+		[21] : Line:  633	InputMethod   GetKey              	(FPSPlayerComponent.jump)
+		[22] : Line:  647	InputMethod   GetKey              	(FPSPlayerComponent.jump)
+		[23] : Line:  689	InputMethod   GetKey              	(FPSPlayerComponent.moveForward)
+		[24] : Line:  839	InputMethod   GetKey              	(FPSPlayerComponent.moveForward)
+		[25] : Line:  841	InputMethod   GetKey              	(FPSPlayerComponent.jump)
+		[26] : Line:  845	InputMethod   GetKey              	(FPSPlayerComponent.crouch)
+		[27] : Line:  888	InputMethod   GetKey              	(FPSPlayerComponent.jump)
+		[28] : Line:  899	InputMethod   GetKey              	(FPSPlayerComponent.crouch)
+		[29] : Line:  914	InputMethod   GetKey              	(FPSPlayerComponent.jump)
+
+Converting script [6 / 51]	[\!Realistic FPS Prefab Files\Scripts\Weapons\Ironsights.cs]
+	Fragments : 3
+		[ 0] : Line:  193	InputMethod   GetKey              	(_fpsPlayer.moveForward)
+		[ 1] : Line:  193	InputMethod   GetKey              	(_fpsPlayer.moveBack)
+		[ 2] : Line:  470	InputMethod   GetKey              	(_fpsPlayer.fire)
+
+Converting script [7 / 51]	[\!Realistic FPS Prefab Files\Scripts\Weapons\PlayerWeapons.cs]
+	Fragments : 16
+		[ 0] : Line:  150	InputMethod   GetKeyDown          	(_fpsPlayerComponent.dropWeapon)
+		[ 1] : Line:  168	InputMethod   GetAxis             	("Mouse ScrollWheel")
+		[ 2] : Line:  168	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectPreviousWeapon)
+		[ 3] : Line:  191	InputMethod   GetAxis             	("Mouse ScrollWheel")
+		[ 4] : Line:  192	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectNextWeapon)
+		[ 5] : Line:  239	InputMethod   GetKeyDown          	(_fpsPlayerComponent.holsterWeapon)
+		[ 6] : Line:  243	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon1)
+		[ 7] : Line:  247	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon2)
+		[ 8] : Line:  251	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon3)
+		[ 9] : Line:  255	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon4)
+		[10] : Line:  259	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon5)
+		[11] : Line:  263	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon6)
+		[12] : Line:  267	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon7)
+		[13] : Line:  271	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon8)
+		[14] : Line:  275	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon9)
+		[15] : Line:  279	InputMethod   GetKeyDown          	(_fpsPlayerComponent.selectWeapon10)
+
+Converting script [8 / 51]	[\!Realistic FPS Prefab Files\Scripts\Weapons\WeaponBehavior.cs]
+	Fragments : 13
+		[ 0] : Line:  289	InputMethod   GetKey              	(_fpsPlayer.fire)
+		[ 1] : Line:  365	InputMethod   GetKeyDown          	(_fpsPlayer.fire)
+		[ 2] : Line:  369	InputMethod   GetKeyDown          	(_fpsPlayer.fire)
+		[ 3] : Line:  441	InputMethod   GetKey              	(_fpsPlayer.reload)
+		[ 4] : Line:  446	InputMethod   GetKey              	(_fpsPlayer.fire)
+		[ 5] : Line:  460	InputMethod   GetKey              	(_fpsPlayer.fire)
+		[ 6] : Line:  471	InputMethod   GetKey              	(_fpsPlayer.moveForward)
+		[ 7] : Line:  471	InputMethod   GetKey              	(_fpsPlayer.moveBack)
+		[ 8] : Line:  511	InputMethod   GetKey              	(_fpsPlayer.fire)
+		[ 9] : Line:  532	InputMethod   GetKey              	(_fpsPlayer.fireMode)
+		[10] : Line:  578	InputMethod   GetKey              	(_fpsPlayer.fire)
+		[11] : Line:  581	InputMethod   GetKey              	(_fpsPlayer.fire)
+		[12] : Line:  691	InputMethod   GetKey              	(_fpsPlayer.fire)
+
+Converting script [9 / 51]	[\HerdSim\Scripts\Demo\SmoothCameraOrbit.cs]
+	Fragments : 8
+		[ 0] : Line:   80	InputMethod   GetMouseButton      	(2)
+		[ 1] : Line:   80	InputMethod   GetKey              	(KeyCode.LeftAlt)
+		[ 2] : Line:   80	InputMethod   GetKey              	(KeyCode.LeftControl)
+		[ 3] : Line:   82	InputMethod   GetAxis             	("Mouse Y")
+		[ 4] : Line:   85	InputMethod   GetMouseButton      	(0)
+		[ 5] : Line:   87	InputMethod   GetAxis             	("Mouse X")
+		[ 6] : Line:   88	InputMethod   GetAxis             	("Mouse Y")
+		[ 7] : Line:  114	InputMethod   GetAxis             	("Mouse ScrollWheel")
+
+Converting script [10 / 51]	[\Plugins\CodeStage\AdvancedFPSCounter\Runtime\Scripts\AFPSCounter.cs]
+	Fragments : 12
+		[ 0] : Line: 1091	InputMethod   GetKeyDown          	(hotKey)
+		[ 1] : Line: 1097	InputMethod   GetKey              	(KeyCode.LeftControl)
+		[ 2] : Line: 1097	InputMethod   GetKey              	(KeyCode.RightControl)
+		[ 3] : Line: 1097	InputMethod   GetKey              	(KeyCode.LeftCommand)
+		[ 4] : Line: 1097	InputMethod   GetKey              	(KeyCode.RightCommand)
+		[ 5] : Line: 1102	InputMethod   GetKey              	(KeyCode.LeftAlt)
+		[ 6] : Line: 1102	InputMethod   GetKey              	(KeyCode.RightAlt)
+		[ 7] : Line: 1107	InputMethod   GetKey              	(KeyCode.LeftShift)
+		[ 8] : Line: 1107	InputMethod   GetKey              	(KeyCode.RightShift)
+		[ 9] : Line: 1121	InputMethod   GetMouseButton      	(0)
+		[10] : Line: 1123	InputProperty mousePosition       
+		[11] : Line: 1130	InputMethod   GetMouseButtonUp    	(0)
+
+Converting script [11 / 51]	[\Plugins\CodeStage\AdvancedFPSCounter\Runtime\Scripts\CountersData\DeviceInfoCounterData.cs]
+	Fragments : 1
+		[ 0] : Line:  485	Other mod.	[Screen.dpi]
+
+Converting script [12 / 51]	[\Scripts\AmmoManager.cs]
+	Fragments : 1
+		[ 0] : Line:   45	InputMethod   GetKeyDown          	(_reloadKey)
+
+Converting script [13 / 51]	[\Scripts\CarCameraManager.cs]
+	Fragments : 1
+		[ 0] : Line:   27	InputMethod   GetKeyUp            	(KeyCode.O)
+
+Converting script [14 / 51]	[\Scripts\GameControls.cs]
+	Fragments : 4
+		[ 0] : Line:   57	InputMethod   GetKeyDown          	(_switchMaster)
+		[ 1] : Line:  116	Other mod.	[Cursor.lockState]
+		[ 2] : Line:  120	Other mod.	[Cursor.lockState]
+		[ 3] : Line:  122	Other mod.	[Cursor.visible]
+
+Converting script [15 / 51]	[\Scripts\GameUIController.cs]
+	Fragments : 4
+		[ 0] : Line:   69	InputMethod   GetKeyDown          	(_inventoryMenuKey)
+		[ 1] : Line:   73	InputMethod   GetKeyDown          	(_craftMenuKey)
+		[ 2] : Line:   81	InputMethod   GetKeyDown          	(_mapMenuKey)
+		[ 3] : Line:   85	InputMethod   GetKeyDown          	(_menuKey)
+
+Converting script [16 / 51]	[\Scripts\HandUseForRealistic.cs]
+	Fragments : 4
+		[ 0] : Line:  215	InputMethod   GetKeyDown          	(keyByNumber)
+		[ 1] : Line:  235	InputMethod   GetKeyDown          	(GameControls.I.Player.use)
+		[ 2] : Line:  240	InputMethod   GetKey              	(GameControls.I.Player.use)
+		[ 3] : Line:  250	InputMethod   GetButtonDown       	("Fire1")
+
+Converting script [17 / 51]	[\Scripts\MouseOrbit.cs]
+	Fragments : 4
+		[ 0] : Line:   29	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   30	InputMethod   GetAxis             	("Mouse Y")
+		[ 2] : Line:   36	InputMethod   GetAxis             	("Mouse ScrollWheel")
+		[ 3] : Line:   39	InputMethod   GetAxis             	("Mouse ScrollWheel")
+
+Converting script [18 / 51]	[\Scripts\MouseOrbitWithZoom.cs]
+	Fragments : 3
+		[ 0] : Line:   45	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   46	InputMethod   GetAxis             	("Mouse Y")
+		[ 2] : Line:   48	InputMethod   GetAxis             	("Mouse ScrollWheel")
+
+Converting script [19 / 51]	[\Scripts\VipCarManager.cs]
+	Fragments : 1
+		[ 0] : Line:   26	InputMethod   GetKeyDown          	(KeyCode.B)
+
+Converting script [20 / 51]	[\Scripts\Backend\JsSpeeker.cs]
+	Fragments : 4
+		[ 0] : Line:  227	Other mod.	[Screen.SetResolution(960, 600, false)]
+		[ 1] : Line:  236	Other mod.	[Screen.SetResolution(960, 600, false)]
+		[ 2] : Line:  245	Other mod.	[Screen.SetResolution(960, 600, false)]
+		[ 3] : Line:  254	Other mod.	[Screen.SetResolution(960, 600, false)]
+
+Converting script [21 / 51]	[\Scripts\BattleRoyale\BattleRoyaleParachuteController.cs]
+	Fragments : 1
+		[ 0] : Line:   13	InputMethod   GetKey              	(KeyCode.W)
+
+Converting script [22 / 51]	[\Scripts\Controllers\FullScreenController.cs]
+	Fragments : 4
+		[ 0] : Line:   14	InputMethod   GetKeyDown          	(KeyCode.P)
+		[ 1] : Line:   14	InputMethod   GetKeyDown          	(KeyCode.F12)
+		[ 2] : Line:   18	Other mod.	[Screen.fullScreen]
+		[ 3] : Line:   22	Other mod.	[Screen.fullScreen]
+
+Converting script [23 / 51]	[\Scripts\Controllers\ItemHoldersTestController.cs]
+	Fragments : 4
+		[ 0] : Line:   24	InputMethod   GetKeyDown          	(KeyCode.F)
+		[ 1] : Line:   40	InputMethod   GetKeyDown          	(KeyCode.G)
+		[ 2] : Line:   50	InputMethod   GetMouseButtonDown  	(0)
+		[ 3] : Line:   68	InputMethod   GetKey              	(KeyCode.W)
+
+Converting script [24 / 51]	[\Scripts\Controllers\MainMenuController.cs]
+	Fragments : 6
+		[ 0] : Line:   32	Other mod.	[Cursor.visible]
+		[ 1] : Line:   33	Other mod.	[Cursor.lockState]
+		[ 2] : Line:   81	InputMethod   GetKeyDown          	(KeyCode.P)
+		[ 3] : Line:   81	InputMethod   GetKeyDown          	(KeyCode.F12)
+		[ 4] : Line:   85	Other mod.	[Screen.fullScreen]
+		[ 5] : Line:   89	Other mod.	[Screen.fullScreen]
+
+Converting script [25 / 51]	[\Scripts\Controllers\ObjectsStatistic.cs]
+	Fragments : 1
+		[ 0] : Line:   73	InputMethod   GetKeyDown          	(KeyCode.BackQuote)
+
+Converting script [26 / 51]	[\Scripts\Controllers\ObjectsStatisticController.cs]
+	Fragments : 1
+		[ 0] : Line:   17	InputMethod   GetKeyDown          	(KeyCode.BackQuote)
+
+Converting script [27 / 51]	[\Scripts\Controllers\OrbitCameraController.cs]
+	Fragments : 3
+		[ 0] : Line:   37	InputMethod   GetKeyUp            	(KeyCode.O)
+		[ 1] : Line:   41	InputMethod   GetMouseButtonDown  	(1)
+		[ 2] : Line:   45	InputMethod   GetMouseButtonUp    	(1)
+
+Converting script [28 / 51]	[\Scripts\Controllers\ScreenUtils.cs]
+	Fragments : 1
+		[ 0] : Line:   11	Other mod.	[Screen.SetResolution(width, height, enable)]
+
+Converting script [29 / 51]	[\Scripts\RMC\RMCCameraSwitcher.cs]
+	Fragments : 1
+		[ 0] : Line:   25	InputMethod   GetKeyDown          	(KeyCode.O)
+
+Converting script [30 / 51]	[\Scripts\RMC\RMCInstructions.cs]
+	Fragments : 1
+		[ 0] : Line:    8	InputMethod   GetKeyDown          	(KeyCode.R)
+
+Converting script [31 / 51]	[\Scripts\RMC\RMCPoliceLights.cs]
+	Fragments : 2
+		[ 0] : Line:  235	InputMethod   GetKeyDown          	(KeyCode.L)
+		[ 1] : Line:  250	InputMethod   GetKeyDown          	(KeyCode.G)
+
+Converting script [32 / 51]	[\Scripts\RMC\RMCRealisticMotorcycleController.cs]
+	Fragments : 3
+		[ 0] : Line:  230	InputMethod   GetAxis             	("Vertical")
+		[ 1] : Line:  234	InputMethod   GetAxis             	("Vertical")
+		[ 2] : Line:  236	InputMethod   GetAxis             	("Horizontal")
+
+Converting script [33 / 51]	[\Scripts\Views\ChatBattlePos.cs]
+	Fragments : 1
+		[ 0] : Line:   40	InputMethod   GetKeyUp            	(KeyCode.X)
+
+Converting script [34 / 51]	[\Scripts\Views\ChatGui.cs]
+	Fragments : 2
+		[ 0] : Line:  129	InputMethod   GetKeyUp            	(KeyCode.KeypadEnter)
+		[ 1] : Line:  129	InputMethod   GetKeyUp            	(KeyCode.Return)
+
+Converting script [35 / 51]	[\Scripts\Views\MapViewController.cs]
+	Fragments : 1
+		[ 0] : Line:  137	InputMethod   GetKeyUp            	(KeyCode.J)
+
+Converting script [36 / 51]	[\Scripts\Views\MapViewPlayersList.cs]
+	Fragments : 1
+		[ 0] : Line:   93	InputMethod   GetKeyDown          	(KeyCode.T)
+
+Converting script [37 / 51]	[\Scripts\Views\PlaceItemViewController.cs]
+	Fragments : 4
+		[ 0] : Line:   79	InputMethod   GetKey              	(KeyCode.LeftShift)
+		[ 1] : Line:   79	InputMethod   GetKey              	(KeyCode.RightShift)
+		[ 2] : Line:   81	InputMethod   GetMouseButtonDown  	(1)
+		[ 3] : Line:   87	InputMethod   GetMouseButton      	(1)
+
+Converting script [38 / 51]	[\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.cs]
+	Fragments : 3
+		[ 0] : Line:   23	InputMethod   GetAxis             	("Horizontal")
+		[ 1] : Line:   23	InputMethod   GetAxis             	("Vertical")
+		[ 2] : Line:   48	InputMethod   GetButton           	("Jump")
+
+Converting script [39 / 51]	[\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs]
+	Fragments : 4
+		[ 0] : Line:   37	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   39	InputMethod   GetAxis             	("Mouse Y")
+		[ 2] : Line:   46	InputMethod   GetAxis             	("Mouse X")
+		[ 3] : Line:   50	InputMethod   GetAxis             	("Mouse Y")
+
+Converting script [40 / 51]	[\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.cs]
+	Fragments : 3
+		[ 0] : Line:   22	InputMethod   GetAxis             	("Horizontal")
+		[ 1] : Line:   22	InputMethod   GetAxis             	("Vertical")
+		[ 2] : Line:   50	InputMethod   GetButton           	("Jump")
+
+Converting script [41 / 51]	[\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.cs]
+	Fragments : 1
+		[ 0] : Line:  105	InputMethod   GetButton           	("Fire2" )
+
+Converting script [42 / 51]	[\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.cs]
+	Fragments : 7
+		[ 0] : Line:  145	InputMethod   GetAxisRaw          	("Vertical")
+		[ 1] : Line:  146	InputMethod   GetAxisRaw          	("Horizontal")
+		[ 2] : Line:  197	InputMethod   GetKey              	(KeyCode.LeftShift)
+		[ 3] : Line:  197	InputMethod   GetKey              	(KeyCode.RightShift)
+		[ 4] : Line:  296	InputMethod   GetButtonDown       	("Jump")
+		[ 5] : Line:  458	InputMethod   GetAxisRaw          	("Vertical")
+		[ 6] : Line:  458	InputMethod   GetAxisRaw          	("Horizontal")
+
+Converting script [43 / 51]	[\Tasharen\Water Example\Scripts\FullScreenOption.cs]
+	Fragments : 4
+		[ 0] : Line:    8	InputMethod   GetKeyDown          	(KeyCode.F5)
+		[ 1] : Line:   10	Other mod.	[Screen.fullScreen]
+		[ 2] : Line:   12	Other mod.	[Screen.SetResolution(1280, 720, false)]
+		[ 3] : Line:   16	Other mod.	[Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true)]
+
+Converting script [44 / 51]	[\VkApiForMobile\DemoAssets\Controller.cs]
+	Fragments : 1
+		[ 0] : Line:  344	InputMethod   GetKeyDown          	(KeyCode.Escape)
+
+Converting script [45 / 51]	[\_Cube Day Z\Asset Packs\Animated Flags\Scripts\Demo\UnluckFlagGUI.cs]
+	Fragments : 5
+		[ 0] : Line:   47	InputMethod   GetMouseButtonUp    	(0)
+		[ 1] : Line:   50	InputMethod   GetKeyUp            	(KeyCode.RightArrow)
+		[ 2] : Line:   52	InputMethod   GetKeyUp            	(KeyCode.LeftArrow)
+		[ 3] : Line:   54	InputMethod   GetKeyUp            	(KeyCode.Space)
+		[ 4] : Line:   65	InputProperty mousePosition       
+
+Converting script [46 / 51]	[\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\RCCCameraOrbit.cs]
+	Fragments : 2
+		[ 0] : Line:   34	InputMethod   GetAxis             	("Mouse X")
+		[ 1] : Line:   35	InputMethod   GetAxis             	("Mouse Y")
+
+Converting script [47 / 51]	[\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Demo Scene Scripts\RCCCamManager.cs]
+	Fragments : 1
+		[ 0] : Line:   36	InputMethod   GetKeyDown          	(KeyCode.C)
+
+Converting script [48 / 51]	[\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Demo Scene Scripts\RCCReset_Scene.cs]
+	Fragments : 1
+		[ 0] : Line:   15	InputMethod   GetKeyUp            	(KeyCode.R)
+
+Converting script [49 / 51]	[\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Enter-Exit\RCCEnterExitCamera.cs]
+	Fragments : 1
+		[ 0] : Line:   17	InputMethod   GetKeyDown          	(KeyCode.E)
+
+Converting script [50 / 51]	[\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Enter-Exit\RCCEnterExitCar.cs]
+	Fragments : 1
+		[ 0] : Line:   21	InputMethod   GetKeyDown          	(KeyCode.E)
+
+Converting script [51 / 51]	[\_Cube Day Z\Asset Packs\ToonWater\Scripts\Core\ToonWaterDuck.cs]
+	Fragments : 9
+		[ 0] : Line:    8	InputProperty touchCount          
+		[ 1] : Line:   14	InputMethod   GetKey              	(KeyCode.UpArrow)
+		[ 2] : Line:   14	InputMethod   GetKey              	(KeyCode.W)
+		[ 3] : Line:   17	InputMethod   GetKey              	(KeyCode.DownArrow)
+		[ 4] : Line:   17	InputMethod   GetKey              	(KeyCode.S)
+		[ 5] : Line:   20	InputMethod   GetKey              	(KeyCode.RightArrow)
+		[ 6] : Line:   20	InputMethod   GetKey              	(KeyCode.D)
+		[ 7] : Line:   23	InputMethod   GetKey              	(KeyCode.LeftArrow)
+		[ 8] : Line:   23	InputMethod   GetKey              	(KeyCode.A)
+
+
+51 scripts modified!
+Overwriting actual scripts...
+	[0 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\Camera\DragRigidbody.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\Camera\DragRigidbody.cs]
+	[1 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\Camera\SmoothMouseLook.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\Camera\SmoothMouseLook.cs]
+	[2 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\HUD\HelpText.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\HUD\HelpText.cs]
+	[3 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\Player\FPSPlayer.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\Player\FPSPlayer.cs]
+	[4 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\Player\FPSRigidBodyWalker.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\Player\FPSRigidBodyWalker.cs]
+	[5 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\Weapons\Ironsights.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\Weapons\Ironsights.cs]
+	[6 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\Weapons\PlayerWeapons.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\Weapons\PlayerWeapons.cs]
+	[7 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\!Realistic FPS Prefab Files\Scripts\Weapons\WeaponBehavior.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\!Realistic FPS Prefab Files\Scripts\Weapons\WeaponBehavior.cs]
+	[8 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\HerdSim\Scripts\Demo\SmoothCameraOrbit.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\HerdSim\Scripts\Demo\SmoothCameraOrbit.cs]
+	[9 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Plugins\CodeStage\AdvancedFPSCounter\Runtime\Scripts\AFPSCounter.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Plugins\CodeStage\AdvancedFPSCounter\Runtime\Scripts\AFPSCounter.cs]
+	[10 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Plugins\CodeStage\AdvancedFPSCounter\Runtime\Scripts\CountersData\DeviceInfoCounterData.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Plugins\CodeStage\AdvancedFPSCounter\Runtime\Scripts\CountersData\DeviceInfoCounterData.cs]
+	[11 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\AmmoManager.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\AmmoManager.cs]
+	[12 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\CarCameraManager.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\CarCameraManager.cs]
+	[13 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\GameControls.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\GameControls.cs]
+	[14 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\GameUIController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\GameUIController.cs]
+	[15 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\HandUseForRealistic.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\HandUseForRealistic.cs]
+	[16 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\MouseOrbit.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\MouseOrbit.cs]
+	[17 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\MouseOrbitWithZoom.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\MouseOrbitWithZoom.cs]
+	[18 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\VipCarManager.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\VipCarManager.cs]
+	[19 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Backend\JsSpeeker.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Backend\JsSpeeker.cs]
+	[20 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\BattleRoyale\BattleRoyaleParachuteController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\BattleRoyale\BattleRoyaleParachuteController.cs]
+	[21 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Controllers\FullScreenController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Controllers\FullScreenController.cs]
+	[22 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Controllers\ItemHoldersTestController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Controllers\ItemHoldersTestController.cs]
+	[23 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Controllers\MainMenuController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Controllers\MainMenuController.cs]
+	[24 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Controllers\ObjectsStatistic.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Controllers\ObjectsStatistic.cs]
+	[25 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Controllers\ObjectsStatisticController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Controllers\ObjectsStatisticController.cs]
+	[26 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Controllers\OrbitCameraController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Controllers\OrbitCameraController.cs]
+	[27 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Controllers\ScreenUtils.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Controllers\ScreenUtils.cs]
+	[28 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\RMC\RMCCameraSwitcher.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\RMC\RMCCameraSwitcher.cs]
+	[29 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\RMC\RMCInstructions.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\RMC\RMCInstructions.cs]
+	[30 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\RMC\RMCPoliceLights.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\RMC\RMCPoliceLights.cs]
+	[31 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\RMC\RMCRealisticMotorcycleController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\RMC\RMCRealisticMotorcycleController.cs]
+	[32 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Views\ChatBattlePos.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Views\ChatBattlePos.cs]
+	[33 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Views\ChatGui.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Views\ChatGui.cs]
+	[34 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Views\MapViewController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Views\MapViewController.cs]
+	[35 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Views\MapViewPlayersList.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Views\MapViewPlayersList.cs]
+	[36 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Scripts\Views\PlaceItemViewController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Scripts\Views\PlaceItemViewController.cs]
+	[37 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.cs]
+	[38 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs]
+	[39 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.cs]
+	[40 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.cs]
+	[41 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.cs]
+	[42 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\Tasharen\Water Example\Scripts\FullScreenOption.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\Tasharen\Water Example\Scripts\FullScreenOption.cs]
+	[43 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\VkApiForMobile\DemoAssets\Controller.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\VkApiForMobile\DemoAssets\Controller.cs]
+	[44 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\_Cube Day Z\Asset Packs\Animated Flags\Scripts\Demo\UnluckFlagGUI.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\_Cube Day Z\Asset Packs\Animated Flags\Scripts\Demo\UnluckFlagGUI.cs]
+	[45 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\RCCCameraOrbit.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\RCCCameraOrbit.cs]
+	[46 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Demo Scene Scripts\RCCCamManager.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Demo Scene Scripts\RCCCamManager.cs]
+	[47 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Demo Scene Scripts\RCCReset_Scene.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Demo Scene Scripts\RCCReset_Scene.cs]
+	[48 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Enter-Exit\RCCEnterExitCamera.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Enter-Exit\RCCEnterExitCamera.cs]
+	[49 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Enter-Exit\RCCEnterExitCar.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\_Cube Day Z\Asset Packs\RealisticCarControllerV2\Scripts\Enter-Exit\RCCEnterExitCar.cs]
+	[50 / 51] from  [E:/GitHub/Cube-DayZ-2018/CF2-Data/Script-Backups/2025-09-06-17-36\Assets-After/\_Cube Day Z\Asset Packs\ToonWater\Scripts\Core\ToonWaterDuck.cs] to [E:/GitHub/Cube-DayZ-2018/Assets/\_Cube Day Z\Asset Packs\ToonWater\Scripts\Core\ToonWaterDuck.cs]
+
+Overwriting COMPLETED!

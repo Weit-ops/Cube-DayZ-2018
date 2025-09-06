@@ -319,6 +319,7 @@ public class MobAI : Photon.MonoBehaviour
 				case 11:
 					WorldController.I.Player.HitPlayer((short)_damage, _radiation, null);
 					base.photonView.RPC("OnAttackTarget", PhotonTargets.All);
+
 					break;
 				case 25:
 				{
@@ -384,6 +385,7 @@ public class MobAI : Photon.MonoBehaviour
 	private void OnAttackTarget()
 	{
 		_soundController.OnAttack();
+		GetComponentInChildren<Animator>().SetTrigger("attack");
 	}
 
 	[PunRPC]

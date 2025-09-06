@@ -193,9 +193,6 @@ public class MenuConnectionController : MonoBehaviour
 		roomOptions.CustomRoomProperties.Add("private", isPrivate);
 		roomOptions.CustomRoomProperties.Add("creatorId", JsSpeeker.viewer_id);
 		roomOptions.CustomRoomPropertiesForLobby = new string[6] { "zombies", "single", "private", "creatorId", "softcap", "id" };
-
-		if (roomOptions.MaxPlayers > 20)
-			roomOptions.MaxPlayers = 20;
 		PhotonNetwork.CreateRoom(roomName2, roomOptions, PhotonNetwork.lobby);
 	}
 

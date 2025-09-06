@@ -40,12 +40,8 @@ v2f vert(appdata v)
 {
 	v2f o;
 	float4 s;
-	
-#if UNITY_VERSION > 550
+
 	o.pos = UnityObjectToClipPos(v.vertex);
-#else
-	o.pos = UnityObjectToClipPos(v.vertex);
-#endif
 
 	// scroll bump waves
 	float4 temp;
@@ -57,7 +53,7 @@ v2f vert(appdata v)
 	o.bumpuv[1] = temp.wz;
 
 	// object space view direction
-	o.viewDir.xzy = normalize( WorldSpaceViewDir(v.vertex) );
+	o.viewDir.xzy = normalize( ObjSpaceViewDir(v.vertex) );
 
 	return o;
 }
