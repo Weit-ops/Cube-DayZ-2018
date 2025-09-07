@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Security.Cryptography;
 using System.Text;
 using LitJson;
@@ -101,11 +102,11 @@ public class PHPNetwork : MonoBehaviour
 		"Rambo"
 	};
 
-	public static string db_url = "http://playme24.ru/cdz/cubez_backend.php";
+	public static string db_url = "http://playme24.ru/cdn/";
 
 	public string phpSecret { get; private set;}
 
-	public int backendId
+	public int user_id
 	{
 		get
 		{
@@ -157,82 +158,116 @@ public class PHPNetwork : MonoBehaviour
 	{
 		WWWForm hData = new WWWForm();
 		string userId = MD5Sun(SystemInfo.deviceUniqueIdentifier).Substring(0,9) ;
-		
-        hData.AddField("user_id",userId);
-        hData.AddField("version",DataKeeper.BuildVersion);
-		hData.AddField("callback","GetProfile");
-		SendWaitingCallback(hData,response);
+		string version = DataKeeper.BuildVersion;
+        hData.AddField("uid",userId);
+        hData.AddField("v",version);
+		hData.AddField("secret", MD5Sun(userId + version));
+		string[] hashvValues = new string[]
+		{
+			userId,
+			version,
+		};
+		StartCoroutine(_WaitingForResponse("getProfile.php", hData, hashvValues, response));
 	}
 	public void SaveView(PlayerViewSaveInfo info)
 	{
 		WWWForm hData = new WWWForm();
-		hData.AddField("backendId",backendId.ToString());
+		hData.AddField("user_id",user_id.ToString());
 		hData.AddField("skinFace",info.FaceIndex);
 		hData.AddField("skinColor",info.SkinColorIndex);
 		hData.AddField("premiumPack",info.PremiumPackIndex);
 		hData.AddField("vipRainCoat",info.VipRainCoat);
-		hData.AddField("callback","SaveView");
-		SendWaitingCallback(hData);
+		string[] hashValues = new string[]
+		{
+			user_id.ToString(),
+			info.FaceIndex.ToString(),
+			info.SkinColorIndex.ToString(),
+			info.PremiumPackIndex.ToString(),
+			info.VipRainCoat.ToString()
+		};
+		StartCoroutine(_WaitingForResponse("set_player_view.php", hData, hashValues));
+	    
 	}
 
 
 	public void SavePlayerProgressMultiplayer(string id)
 	{
 		WWWForm form = new WWWForm();
-		form.AddField("backendId",(backendId + "_" + id).ToString());
-		form.AddField("playerData",Convert.ToBase64String(WorldController.I.SavePlayerData()));
-		form.AddField("callback","SavePlayerMultiplayer");
-		SendWaitingCallback(form);
-		//SendWaitingCallback (3,possable,null);
+		string idg = (user_id + "_" + id).ToString();
+		string data = Convert.ToBase64String(WorldController.I.SavePlayerData());
+        form.AddField("user_id",idg);
+		form.AddField("playerData",data);
+		form.AddField("call", "saveplayer");
+		string[] hashValues = new string[]
+		{
+			idg,
+			data
+		};
+		StartCoroutine(_WaitingForResponse("world_player_config.php", form, hashValues));
 	}
 	public void LoadPlayerProgressMultiplayer(string id,Action<string> callback)
 	{
 	    WWWForm form = new WWWForm();
-		form.AddField("backendId",(backendId + "_" + id).ToString());
-		form.AddField("callback","LoadPlayerMultiplayer");
-		//SendWaitingCallback (4, possable,callback);
-		SendWaitingCallback(form,callback);
+		string idg = (user_id + "_" + id).ToString();
+        form.AddField("user_id",idg);
+		form.AddField("call", "loadplayer");
+		string[] hashValues = new string[] { idg };
+		StartCoroutine(_WaitingForResponse("world_player_config.php", form, hashValues, callback));
 	}
 
 	public void SaveWorldData(string name,string data)
 	{
 		WWWForm form = new WWWForm();
-		if (name != string.Empty){
-		form.AddField("worldName",name);
+		if (name != string.Empty && data != string.Empty)
+		{
+			form.AddField("worldName", name);
+			form.AddField("worldData", data);
 		}
-		form.AddField("worldData",data);
 		form.AddField("callback","SaveWorld");
-		SendWaitingCallback(form);
-		//SendWaitingCallback (6, possable,null);
+		string[] hashValue = new string[]
+		{
+			name,
+			data,
+		};
+		StartCoroutine(_WaitingForResponse("world_config.php", form, hashValue));
 	}
 
 	public void LoadWorldMultiplayer(string name,Action<string> responseCallback){
 		WWWForm wWForm = new WWWForm();
 		wWForm.AddField("worldName",name);
-		wWForm.AddField("callback","LoadWorld");
-		//SendWaitingCallback (7, possable, responseCallback);
-		SendWaitingCallback(wWForm,responseCallback);
+		wWForm.AddField("call","loadworld");
+		string[] hashValues = new string[]
+		{
+			name,
+		};
+		StartCoroutine(_WaitingForResponse("world_config.php", wWForm,hashValues, responseCallback));
 	}
 
 	public void UseSpecialPack(int packId)
 	{
 		WWWForm form = new WWWForm();
-		form.AddField("backendId",backendId.ToString());
+		form.AddField("user_id", user_id.ToString());
 		form.AddField("specialPackId",packId.ToString());
-		form.AddField("callback","UseSpecialPack");
-		SendWaitingCallback(form,UpdateSpecialPackCount);
-		/*Dictionary <string,string> Data = new Dictionary<string,string> ();
-		Data ["playerId"] = backendId.ToString();
-		Data ["specialPackId"] = packId.ToString ();
-		SendWaitingCallback (9, Data, UpdateSpecialPackCount);*/
+		form.AddField("call","usepack");
+		string[] hashValues = new string[]
+		{
+			user_id.ToString(),
+			packId.ToString(),
+		};
+		StartCoroutine(_WaitingForResponse("player_settings.php", form, hashValues, UpdateSpecialPackCount));
 	}
 	public void ChangeName(string text)
 	{
         WWWForm form = new WWWForm();
-        form.AddField("backendId", backendId.ToString());
+        form.AddField("user_id", user_id.ToString());
         form.AddField("user_name", text);
-        form.AddField("callback", "NickName");
-        SendWaitingCallback(form, UpdateSpecialPackCount);
+        form.AddField("call", "changename");
+		string[] hashValues = new string[]
+		{
+			user_id.ToString(),
+			text,
+		};
+		StartCoroutine(_WaitingForResponse("player_settings.php", form, hashValues));
     }
 
 	public void UpdateSpecialPackCount(string response)
@@ -241,20 +276,16 @@ public class PHPNetwork : MonoBehaviour
 		int num = DataKeeper.SelectedSpecialPackId;
 		DataKeeper.BackendInfo.purchased_items[num - 1].count = Convert.ToInt32(jsix[SpecialPacksNames[num - 1]].ToString());
 	}
-	public void SendWaitingCallback( WWWForm hData,Action<string> responseCallback = null)
-	{
-		StartCoroutine (_SendWaitingCallback (hData,responseCallback));
-	}
 
-	public IEnumerator _SendWaitingCallback(WWWForm data,Action<string> responseCallback = null)
+	public IEnumerator _WaitingForResponse(string request,WWWForm data, string[] hashValues,Action<string> responseCallback = null)
 	{
-		string MD5SUN = string.Empty;
-		foreach (var headers in data.headers)
+		string hash = string.Empty;
+        for (int i = 0; i < hashValues.Length; i++)
 		{
-            MD5SUN = MD5SUN + headers.Key + "=" + headers.Value;
+			hash = hash + hashValues[i] + "-";
 		}
-		data.AddField ("MD", MD5Sun(MD5SUN));
-		WWW newCallback = new WWW (db_url,data);
+		data.AddField ("hash",MD5Sun(hash));
+		WWW newCallback = new WWW (db_url + request,data);
 		yield return newCallback;
 		if (newCallback.error == null && responseCallback != null) 
 		{
@@ -269,7 +300,6 @@ public class PHPNetwork : MonoBehaviour
 	private void Awake(){
 		
 		DontDestroyOnLoad (gameObject);
-		phpSecret = MD5Sun ("ivanXO_devloper2008");
 		I = this;
 	}
 }

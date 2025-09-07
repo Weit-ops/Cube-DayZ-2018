@@ -60,7 +60,7 @@ public static class DataKeeper
 	public static bool IsNewGameClick = false;
 	public static bool IsBattleRoyaleClick = false;
 	public static bool IsSkyWarsClick = false;
-	public static string BuildVersion = "2.65";
+	public static string BuildVersion = "2.66";
 	public static string _chatAppVersion = "1.32";
 	public static float AutoSaveTime = 600f;
 	public static float AutoSaveWorldTime = 300f;

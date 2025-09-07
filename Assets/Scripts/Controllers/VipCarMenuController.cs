@@ -76,7 +76,7 @@ public class VipCarMenuController : MonoBehaviour
 		_characterMenu.SetActive(false);
 		_respawnPacks.SelectedIndex = 0;
 		CheckIfCarPurchased();
-		CheckEvailibleCars();
+		CheckEvailibleCars();ToggleOffersCars(true);
 	}
 
 	private void OnSelectCarInMenu()

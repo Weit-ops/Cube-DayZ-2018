@@ -72,7 +72,6 @@ public class UIVersion : MonoBehaviour
 	}
     private void OnGUI()
     {
-        //GUILayout.Label("\n\n" + CompasCubeDayZ.GetDirection(GameControls.I.Player.transform.TransformPoint(Vector3.forward), GameControls.I.Player.transform.TransformDirection(Vector3.forward)));
     }
 	private void CalculateCompasValue()
 	{

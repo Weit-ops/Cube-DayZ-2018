@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Text;
 using BattleRoyale;
 using CodeStage.AdvancedFPSCounter;
@@ -152,23 +153,32 @@ public class MenuViewController : MonoBehaviour
 
 	private void ExitFromGame()
 	{
-		RespawnMenuController.SetDieFlagFalse();
-		WorldController.I.SavePlayer(DataKeeper.GameType == GameType.Single);
-
-		if (PhotonNetwork.isMasterClient && WorldController.I.MultiplayerWorldLoaded && PhotonNetwork.room != null)
-		{
-			WorldController.I.SaveWorldInMultiplayer();
-		}
-
-		WorldController.I.LeaveRoomBySelf = true;
-		WorldController.I.StopCoroutine("AddMobsForPulling");
-		WorldController.I.StopCoroutine("AutoSaveMultiplayerWorld");
-
-		if (PhotonNetwork.room != null)
-		{
-			PhotonNetwork.LeaveRoom();
-		}
+		StartCoroutine(OnExitGame());
 	}
+	private IEnumerator OnExitGame()
+	{
+        RespawnMenuController.SetDieFlagFalse();
+        WorldController.I.SavePlayer(DataKeeper.GameType == GameType.Single);
+
+        if (PhotonNetwork.isMasterClient && WorldController.I.MultiplayerWorldLoaded && PhotonNetwork.room != null)
+        {
+            WorldController.I.SaveWorldInMultiplayer();
+
+        }
+		if (WorldController.I.MultiplayerWorldLoaded && PhotonNetwork.room != null)
+		{
+            PHPNetwork.I.SavePlayerProgressMultiplayer((string)PhotonNetwork.room.CustomProperties["id"]);
+        }
+		yield return new WaitForSeconds(2f);
+        WorldController.I.LeaveRoomBySelf = true;
+        WorldController.I.StopCoroutine("AddMobsForPulling");
+        WorldController.I.StopCoroutine("AutoSaveMultiplayerWorld");
+
+        if (PhotonNetwork.room != null)
+        {
+            PhotonNetwork.LeaveRoom();
+        }
+    }
 
 	private void OnLeftRoom()
 	{
