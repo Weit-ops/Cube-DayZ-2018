@@ -18,16 +18,108 @@ MonoBehaviour:
   HostType: 1
   PreferredRegion: 0
   EnabledRegions: -1
-  Protocol: 0
+  Protocol: 4
   ServerAddress: 
   ServerPort: 5055
   VoiceServerPort: 5055
-  JoinLobby: 1
+  JoinLobby: 0
   EnableLobbyStatistics: 0
   PunLogging: 0
   NetworkLogging: 1
   RunInBackground: 1
   RpcList:
+  - _ApplyDamage
+  - _ApplyFlash
+  - _BanPlayer
+  - _ChangeCanBuildStatus
+  - _ChangeCubes
+  - _ChangeCubesHealth
+  - _ChangeDominatingPointState
+  - _ChangeFlagState
+  - _ChangeItemState
+  - _ChangePlace
+  - _ChangeTeamScore
+  - _ChatMessage
+  - _CreateCanonShot
+  - _CreateEmptyClipEvent
+  - _CreateGameItem
+  - _CreateGameMagic
+  - _CreateGunShot
+  - _CreateHit
+  - _CreateNewAA
+  - _CreateNewWire
+  - _CreateRechargeSound
+  - _CreateShot
+  - _CreateShot2
+  - _DeleteAA
+  - _DeleteWire
+  - _Die
+  - _DoExplosion
+  - _EnterGame
+  - _ExitDrive
+  - _Explode
+  - _FireGun
+  - _FlagCaptured
+  - _Freeze
+  - _GetInTransport
+  - _GiveLotOfDrop
+  - _HereAreMyParams
+  - _MonsterAlifeYet
+  - _MonsterDead
+  - _MoveItem
+  - _NS
+  - _NS0
+  - _NS1
+  - _OrderToCreateMonster
+  - _PlaceNewCube
+  - _PlayActivity
+  - _PlayerDressSkin
+  - _RemoveGameItem
+  - _RequestToRespawnTransport
+  - _RequestToRestartShooter
+  - _RequestToRestartTeamShooter
+  - _Respawn
+  - _RotateGameItem
+  - _SaveMapItem
+  - _SaveMonsterRespawn
+  - _SaveTransportRespawn
+  - _SaveTrigger
+  - _SaveWire
+  - _SendGameParams_Shooter
+  - _SendGameParams_Survival
+  - _SendGameParams_Teams
+  - _SendMeGameParams
+  - _SendMeParams
+  - _SendMissionParams
+  - _SendMyParams
+  - _SendNoPlaceToDrive
+  - _SendSurvivalParams
+  - _SetAAParameters
+  - _SetSurvivalModeReady
+  - _StartExplosion
+  - _Startle
+  - _SurvivalStartNewWave
+  - _SynhronizePlayer
+  - _SynhronizePlayers
+  - _Teleport
+  - _Throw
+  - _ToggleTestMission
+  - _TransportAlifeYet
+  - _TransportDead
+  - _TryChangePlace
+  - _TryToDrive
+  - _UnFreeze
+  - Chat
+  - DestroyRpc
+  - InstantiateRpc
+  - MapFromMaster
+  - PickupItemInit
+  - PunPickup
+  - PunPickupSimple
+  - PunRespawn
+  - RequestForPickupItems
+  - RequestForPickupTimes
+  - SendMeMap
   - Activate
   - ActivateMob
   - ActivateObject
@@ -36,14 +128,12 @@ MonoBehaviour:
   - CalculateNextFogSidePosition
   - ChangeItemInHandView
   - ChangeItemInStorage
-  - Chat
   - CheckChest
   - CheckIfCanGetItem
   - CreateRagdoll
   - DeactivateMob
   - DestroyByMaster
   - DestroyIslands
-  - DestroyRpc
   - Destruct
   - DropItem
   - DropLoot
@@ -58,7 +148,6 @@ MonoBehaviour:
   - HitMob
   - HitObject
   - InstantiateObjects
-  - InstantiateRpc
   - MobChangeSector
   - MobResetSector
   - ObjectChangeSector
@@ -67,16 +156,10 @@ MonoBehaviour:
   - OnFindTarget
   - OnRespawn
   - OpenChest
-  - PickupItemInit
   - PlaceItem
   - PlantItemByMaster
   - PlayerChangeSector
-  - PunPickup
-  - PunPickupSimple
-  - PunRespawn
   - RememberOldCarId
-  - RequestForPickupItems
-  - RequestForPickupTimes
   - RespawnPlayer
   - SeatOccupied
   - SetupSpawnPoint

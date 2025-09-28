@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Cloud Layers
   m_Shader: {fileID: 4800000, guid: 9f57189520c8248bf8aae998244b21df, type: 3}
-  m_ShaderKeywords: BUMPED GAMMA LDR
+  m_ShaderKeywords: FASTEST GAMMA LDR
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

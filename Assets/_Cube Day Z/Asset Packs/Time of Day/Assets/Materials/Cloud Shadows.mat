@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Cloud Shadows
   m_Shader: {fileID: 4800000, guid: 55158f8039b974f21ab2964fcdfdad1a, type: 3}
-  m_ShaderKeywords: BUMPED
+  m_ShaderKeywords: FASTEST
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

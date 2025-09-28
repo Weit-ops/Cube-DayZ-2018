@@ -1533,7 +1533,7 @@ public static class PhotonNetwork
             return true;
         }
 
-        Debug.LogError("Cannot send messages when not connected. Either connect to Photon OR use offline mode!");
+      
         return false;
     }
 
@@ -2976,14 +2976,6 @@ public static class PhotonNetwork
         else
         {
             Debug.LogWarning("Could not execute RPC " + methodName + ". Possible scene loading in progress?");
-        }
-    }
-
-    internal static void RPC_ToListOfPlayers(PhotonView view, string methodName, PhotonPlayer[] players, bool encrpyt, params object[] parameters)
-    {
-        for (int i = 0; i < players.Length; i++)
-        {
-            RPC(view, methodName, players[i], encrpyt, parameters);
         }
     }
 

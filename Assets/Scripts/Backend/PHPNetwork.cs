@@ -152,12 +152,21 @@ public class PHPNetwork : MonoBehaviour
 		}
 		return stringBuilder.ToString();
 	}
-		
+
 
 	public void GetProfile(Action<string> response)
 	{
 		WWWForm hData = new WWWForm();
-		string userId = MD5Sun(SystemInfo.deviceUniqueIdentifier).Substring(0,9) ;
+		string userId = string.Empty;
+
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
+		{
+			userId = MD5Sun(SystemInfo.deviceUniqueIdentifier).Substring(0, 9);
+		}
+		else
+		{
+			userId = VKApiClient.I.uid;
+		}
 		string version = DataKeeper.BuildVersion;
         hData.AddField("uid",userId);
         hData.AddField("v",version);

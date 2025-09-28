@@ -119,7 +119,7 @@ public class Controller : MonoBehaviour
 
     public void OnVkAuthSuccesfull()
     {
-        /*string userName = VKApiClient.I.user.first_name + "_" + VKApiClient.I.user.last_name;
+       /* string userName = VKApiClient.I.first_name + "_" + VKApiClient.I.last_name;
 		StartCoroutine(PHPNetwork.I.GetProfile (VKApiClient.I.user.userId,userName,PHPNetwork.GetMD5(VKApiClient.I.user.userId + "0300400243"), OnAuthResponse));
 		MainMenuController.I.ToggleMainMenu(true);
 		ShowLoginWindow(false);
@@ -167,13 +167,22 @@ public class Controller : MonoBehaviour
         }
         DataKeeper.BackendInfo.purchased_items = new List<PurchasedItemsBackensInfo>();
         DataKeeper.BackendInfo.purchased_items = array;
-        DataKeeper.BackendInfo.user.user_id = jsonData["uid"].ToString();
-        JsSpeeker.I._vk_name(DataKeeper.BackendInfo.user.user_id.ToString());
-        string name = jsonData["NickName"].ToString().Replace("_", " ");
-        JsSpeeker.I._vk_nick(name);
-        if (name.Length < 4)
+        if (Application.platform != RuntimePlatform.WebGLPlayer)
         {
-            MainMenuController.I._newNamePanel.SetActive(true);
+            DataKeeper.BackendInfo.user.user_id = jsonData["uid"].ToString();
+            JsSpeeker.I._vk_name(DataKeeper.BackendInfo.user.user_id.ToString());
+            string name = jsonData["NickName"].ToString().Replace("_", " ");
+            JsSpeeker.I._vk_nick(name);
+            if (name.Length < 4)
+            {
+                MainMenuController.I._newNamePanel.SetActive(true);
+            }
+        }
+        else
+        {
+            DataKeeper.BackendInfo.user.user_id = VKApiClient.I.uid;
+            JsSpeeker.I._vk_name(VKApiClient.I.uid);
+            JsSpeeker.I._vk_nick(VKApiClient.I.first_name + " " + VKApiClient.I.last_name);
         }
     }
 
