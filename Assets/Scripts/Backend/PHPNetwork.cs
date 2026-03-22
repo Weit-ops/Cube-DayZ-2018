@@ -102,7 +102,7 @@ public class PHPNetwork : MonoBehaviour
 		"Rambo"
 	};
 
-	public static string db_url = "http://playme24.ru/cdn/";
+	public static string db_url = "https://playme24.ru/cdn/";
 
 	public string phpSecret { get; private set;}
 
